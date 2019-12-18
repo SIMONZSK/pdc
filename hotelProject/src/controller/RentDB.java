@@ -85,24 +85,24 @@ public class RentDB extends BaseDB {
         return false;
     }
 
-    public boolean update(RentInfo rentInfo) {
-        String sql = "update RENTINFO set RENTTYPE=? ,ROOMTYPE=?,RENTDAYS=?,ANTECEDENTMONEY=?,REMARK=?   where GUESTIDNUMBER=?";
-        try {
-            PreparedStatement preparedStatement = conn.prepareStatement(sql);
-            preparedStatement.setString(1, rentInfo.getRentType());
-            preparedStatement.setString(2, rentInfo.getRoomType());
-            preparedStatement.setInt(3, rentInfo.getRentDays());
-            preparedStatement.setInt(4, rentInfo.getAntecedentMoney());
-            preparedStatement.setString(5, rentInfo.getRemark());
-            preparedStatement.setString(6, rentInfo.getGuestIDnumber());
-            if (preparedStatement.executeUpdate() > 0) {
-                return true;
-            }
-        } catch (SQLException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-        return false;
-    }
+//    public boolean update(RentInfo rentInfo) {
+//        String sql = "update RENTINFO set RENTTYPE=? ,ROOMTYPE=?,RENTDAYS=?,ANTECEDENTMONEY=?,REMARK=?   where GUESTIDNUMBER=?";
+//        try {
+//            PreparedStatement preparedStatement = conn.prepareStatement(sql);
+//            preparedStatement.setString(1, rentInfo.getRentType());
+//            preparedStatement.setString(2, rentInfo.getRoomType());
+//            preparedStatement.setInt(3, rentInfo.getRentDays());
+//            preparedStatement.setInt(4, rentInfo.getAntecedentMoney());
+//            preparedStatement.setString(5, rentInfo.getRemark());
+//            preparedStatement.setString(6, rentInfo.getGuestIDnumber());
+//            if (preparedStatement.executeUpdate() > 0) {
+//                return true;
+//            }
+//        } catch (SQLException e) {
+//            // TODO Auto-generated catch block
+//            e.printStackTrace();
+//        }
+//        return false;
+//    }
 
 }

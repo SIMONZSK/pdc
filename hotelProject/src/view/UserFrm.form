@@ -72,7 +72,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/images/023-users.png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="&#x670d;&#x52a1;&#x7533;&#x8bf7;(&#x672a;&#x6dfb;&#x52a0;)"/>
+            <Property name="text" type="java.lang.String" value="&#x670d;&#x52a1;&#x7533;&#x8bf7;"/>
           </Properties>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem5">

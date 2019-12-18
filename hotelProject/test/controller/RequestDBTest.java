@@ -7,9 +7,10 @@ package controller;
 
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import model.UserInfo;
+import model.RequestInfo;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -21,76 +22,94 @@ import static org.junit.Assert.*;
  *
  * @author hasee
  */
-public class UserDBTest {
-
-    public UserDBTest() {
+public class RequestDBTest {
+    
+    public RequestDBTest() {
     }
-
+    
     @BeforeClass
     public static void setUpClass() {
+        
         try {
             BaseDB baseDB = new BaseDB();
             Statement statement = baseDB.conn.createStatement();
-            statement.executeUpdate("insert into USERINFO values(\'test\' ,\'test\',true)");
+            statement.executeUpdate("insert into REQUESTINFO values(\'test\',\'test\',\'test\')");
         } catch (SQLException ex) {
             Logger.getLogger(UserDBTest.class.getName()).log(Level.SEVERE, null, ex);
         }
-
     }
-
+    
     @AfterClass
     public static void tearDownClass() {
+        
         try {
             BaseDB baseDB = new BaseDB();
             Statement statement = baseDB.conn.createStatement();
-            statement.executeUpdate("delete from USERINFO where NAME=\'test\'");
+            statement.executeUpdate("delete from REQUESTINFO where NAME==\'test\'");
         } catch (SQLException ex) {
             Logger.getLogger(UserDBTest.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-
+    
     @Before
     public void setUp() {
     }
-
+    
     @After
     public void tearDown() {
     }
 
     /**
-     * Test of login method, of class UserDB.
+     * Test of addRequest method, of class RequestDB.
      */
     @Test
-    public void testLogin() {
-        System.out.println("login");
-        UserInfo userInfo = new UserInfo();
-        userInfo.setUserName("test");
-        userInfo.setPassword("test");
-        userInfo.setUserType(true);
-        UserDB instance = new UserDB();
+    public void testAddRequest() {
+        System.out.println("addRequest");
+        RequestInfo requestInfo = new RequestInfo();
+        requestInfo.setRequest("test");
+        requestInfo.setName("test");
+        requestInfo.setId("test");
+        RequestDB instance = new RequestDB();
         boolean expResult = true;
-        boolean result = instance.login(userInfo);
+        boolean result = instance.addRequest(requestInfo);
+        
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
+
     }
 
     /**
-     * Test of register method, of class UserDB.
+     * Test of getRequestList method, of class RequestDB.
      */
     @Test
-    public void testRegister() {
-        System.out.println("register");
-        UserInfo userInfo = new UserInfo();
-        userInfo.setUserName("test");
-        userInfo.setPassword("test");
-        userInfo.setUserType(true);
-        UserDB instance = new UserDB();
+    public void testGetRequestList() {
+        System.out.println("getRequestList");
+        RequestInfo requestInfo = new RequestInfo();
+        requestInfo.setName("test");
+        RequestDB instance = new RequestDB();
         boolean expResult = true;
-        boolean result = instance.register(userInfo);
+        boolean result=false;
+        if(instance.getRequestList(requestInfo).size()>0)
+            result=true;
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
+
     }
 
+    /**
+     * Test of delete method, of class RequestDB.
+     */
+    @Test
+    public void testDelete() {
+        System.out.println("delete");
+        String name = "test";
+        RequestDB instance = new RequestDB();
+        boolean expResult = false;
+        boolean result = instance.delete(name);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+
+    }
+
+    
 }

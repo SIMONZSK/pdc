@@ -1,11 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package controller;
 
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import model.ReserveInfo;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -25,10 +25,24 @@ public class ReserveDBTest {
     
     @BeforeClass
     public static void setUpClass() {
+        try {
+            BaseDB baseDB=new BaseDB();
+            Statement statement=baseDB.conn.createStatement();
+            statement.executeUpdate("delete from RESERVEINFO where GUESTIDNUMBER=\'TEST\'");
+        } catch (SQLException ex) {
+            Logger.getLogger(ReserveDBTest.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
     
     @AfterClass
     public static void tearDownClass() {
+        try {
+            BaseDB baseDB=new BaseDB();
+            Statement statement=baseDB.conn.createStatement();
+            statement.executeUpdate("delete from RESERVEINFO where GUESTIDNUMBER=\'TEST\'");
+        } catch (SQLException ex) {
+            Logger.getLogger(ReserveDBTest.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
     
     @Before
@@ -45,13 +59,19 @@ public class ReserveDBTest {
     @Test
     public void testAddRent() {
         System.out.println("addRent");
-        ReserveInfo reserveInfo = null;
+        ReserveInfo reserveInfo = new ReserveInfo();
+        reserveInfo.setGuestIDnumber("test");
+        reserveInfo.setGuestName("test");
+        reserveInfo.setRentType("test");
+        reserveInfo.setRoomType("test");
+        reserveInfo.setRentDays(1);
+        reserveInfo.setRemark("test");
+        reserveInfo.setResult(true);  
         ReserveDB instance = new ReserveDB();
-        boolean expResult = false;
+        boolean expResult = true;
         boolean result = instance.addRent(reserveInfo);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -60,13 +80,14 @@ public class ReserveDBTest {
     @Test
     public void testGetRentList() {
         System.out.println("getRentList");
-        ReserveInfo reserveInfo = null;
+        ReserveInfo reserveInfo = new ReserveInfo();
+        reserveInfo.setGuestName("test");
         ReserveDB instance = new ReserveDB();
-        List<ReserveInfo> expResult = null;
-        List<ReserveInfo> result = instance.getRentList(reserveInfo);
+        boolean expResult=true;
+        boolean result=false;
+        if(instance.getRentList(reserveInfo).size()>0) result=true;
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -75,13 +96,15 @@ public class ReserveDBTest {
     @Test
     public void testGetReserveResult() {
         System.out.println("getReserveResult");
-        ReserveInfo reserveInfo = null;
+        ReserveInfo reserveInfo = new ReserveInfo();
+        reserveInfo.setGuestIDnumber("test");
+        reserveInfo.setResult(true);
+        
         ReserveDB instance = new ReserveDB();
         boolean expResult = false;
         boolean result = instance.getReserveResult(reserveInfo);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -90,13 +113,12 @@ public class ReserveDBTest {
     @Test
     public void testDelete() {
         System.out.println("delete");
-        String guestIDnumber = "";
+        String guestIDnumber = "test";
         ReserveDB instance = new ReserveDB();
-        boolean expResult = false;
+        boolean expResult = true;
         boolean result = instance.delete(guestIDnumber);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
     
 }

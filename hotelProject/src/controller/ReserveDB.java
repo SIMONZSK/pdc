@@ -39,7 +39,7 @@ public class ReserveDB extends BaseDB {
             }
         } catch (SQLException ex) {
             // TODO Auto-generated catch block
-            ex.printStackTrace();
+
         }
         return false;
     }
@@ -75,7 +75,7 @@ public class ReserveDB extends BaseDB {
     public boolean getReserveResult(ReserveInfo reserveInfo) {
         String sqlString = "select * from RESERVEINFO";
         if (!StringUtil.isEmpty(reserveInfo.getGuestIDnumber())) {
-            sqlString += " where GUESTIDNUMBER = \'" + reserveInfo.getGuestIDnumber()+"\'";
+            sqlString += " where GUESTIDNUMBER = \'" + reserveInfo.getGuestIDnumber() + "\'";
         }
         try {
             PreparedStatement preparedStatement = conn.prepareStatement(sqlString);
@@ -83,11 +83,13 @@ public class ReserveDB extends BaseDB {
             while (executeQuery.next()) {
                 if (executeQuery.getBoolean("RESULT")) {
                     return true;
+                } else {
+                    return false;
                 }
             }
         } catch (SQLException e) {
             // TODO Auto-generated catch block
-            e.printStackTrace();
+
         }
         return false;
     }
@@ -102,7 +104,7 @@ public class ReserveDB extends BaseDB {
             }
         } catch (SQLException ex) {
             // TODO Auto-generated catch block
-            ex.printStackTrace();
+
         }
         return false;
     }

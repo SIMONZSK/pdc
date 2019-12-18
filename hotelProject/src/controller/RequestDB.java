@@ -76,23 +76,6 @@ public class RequestDB extends BaseDB {
         return false;
     }
 
-    public boolean update(RequestInfo requestInfo) {
-        String sql = "update REQUESTINFO set REQUEST=? ,ID=?   where NAME=?";
-        try {
-            PreparedStatement preparedStatement = conn.prepareStatement(sql);
-            preparedStatement.setString(1, requestInfo.getRequest());
-            preparedStatement.setString(2, requestInfo.getName());
-            preparedStatement.setString(3, requestInfo.getId());
-           
-            if (preparedStatement.executeUpdate() > 0) {
-                return true;
-            }
-        } catch (SQLException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-        return false;
-    }
         
         
         

@@ -18,15 +18,7 @@ public class RentInfo {
 	private int RentDays;
 	private int antecedentMoney=0;
 	private String remark;
-//        private long rentTime;
-//
-//    public long getRentTime() {
-//        return rentTime;
-//    }
-//
-//    public void setRentTime(long rentTime) {
-//        this.rentTime = rentTime;
-//    }
+
         
     public String getGuestIDnumber() {
         return guestIDnumber;

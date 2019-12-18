@@ -32,7 +32,6 @@ public class RoomDB extends BaseDB {
             }
         } catch (SQLException ex) {
             // TODO Auto-generated catch block
-            ex.printStackTrace();
         }
         return false;
     }
@@ -55,7 +54,6 @@ public class RoomDB extends BaseDB {
             }
         } catch (SQLException e) {
             // TODO Auto-generated catch block
-            e.printStackTrace();
         }
         return resultList;
     }

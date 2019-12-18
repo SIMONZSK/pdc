@@ -179,7 +179,7 @@ public class UserFrm extends javax.swing.JFrame {
         jMenuBar1.add(jMenu1);
 
         jMenu4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/023-users.png"))); // NOI18N
-        jMenu4.setText("服务申请(未添加)");
+        jMenu4.setText("服务申请");
 
         jMenuItem5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/015-smile.png"))); // NOI18N
         jMenuItem5.setText("客房服务请求");
