@@ -1,0 +1,2 @@
+view.Timerto
+view.time
