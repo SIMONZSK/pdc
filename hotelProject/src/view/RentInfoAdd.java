@@ -14,12 +14,12 @@ import util.StringUtil;
  *
  * @author hasee
  */
-public class AddRentFrm extends javax.swing.JFrame {
+public class RentInfoAdd extends javax.swing.JFrame {
 
     /**
      * Creates new form AddRentFrm
      */
-    public AddRentFrm() {
+    public RentInfoAdd() {
         initComponents();
     }
 
@@ -48,8 +48,6 @@ public class AddRentFrm extends javax.swing.JFrame {
         MoneyTextField = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         RemarkTextField = new javax.swing.JTextField();
-        jLabel8 = new javax.swing.JLabel();
-        RoomTypeComboBox1 = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("添加新的住房信息");
@@ -129,18 +127,6 @@ public class AddRentFrm extends javax.swing.JFrame {
 
         RemarkTextField.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
 
-        jLabel8.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/房间.png"))); // NOI18N
-        jLabel8.setText("预订房间：");
-
-        RoomTypeComboBox1.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
-        RoomTypeComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "101", "102", "103", "104" }));
-        RoomTypeComboBox1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RoomTypeComboBox1ActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -164,8 +150,7 @@ public class AddRentFrm extends javax.swing.JFrame {
                                     .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel5)
-                                    .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addComponent(jLabel5))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(MoneyTextField, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -174,8 +159,7 @@ public class AddRentFrm extends javax.swing.JFrame {
                             .addComponent(RemarkTextField, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(RentDaysTextField)
                             .addComponent(RentTypeComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(RoomTypeComboBox, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(RoomTypeComboBox1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(RoomTypeComboBox, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(75, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -209,15 +193,11 @@ public class AddRentFrm extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(RemarkTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(RoomTypeComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addGap(35, 35, 35)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(SubmitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ResetButton, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+                .addContainerGap(25, Short.MAX_VALUE))
         );
 
         pack();
@@ -301,10 +281,6 @@ public class AddRentFrm extends javax.swing.JFrame {
 //        MainFrm main=new MainFrm();
     }//GEN-LAST:event_SubmitButtonActionPerformed
 
-    private void RoomTypeComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RoomTypeComboBox1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_RoomTypeComboBox1ActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -322,20 +298,21 @@ public class AddRentFrm extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(AddRentFrm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RentInfoAdd.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(AddRentFrm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RentInfoAdd.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(AddRentFrm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RentInfoAdd.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(AddRentFrm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RentInfoAdd.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new AddRentFrm().setVisible(true);
+                new RentInfoAdd().setVisible(true);
             }
         });
     }
@@ -349,7 +326,6 @@ public class AddRentFrm extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> RentTypeComboBox;
     private javax.swing.JButton ResetButton;
     private javax.swing.JComboBox<String> RoomTypeComboBox;
-    private javax.swing.JComboBox<String> RoomTypeComboBox1;
     private javax.swing.JButton SubmitButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -358,6 +334,5 @@ public class AddRentFrm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     // End of variables declaration//GEN-END:variables
 }

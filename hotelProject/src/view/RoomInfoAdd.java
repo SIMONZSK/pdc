@@ -15,12 +15,12 @@ import util.StringUtil;
  *
  * @author hasee
  */
-public class AddRoomFrm extends javax.swing.JFrame {
+public class RoomInfoAdd extends javax.swing.JFrame {
 
     /**
      * Creates new form AddRoomFrm
      */
-    public AddRoomFrm() {
+    public RoomInfoAdd() {
         initComponents();
     }
 
@@ -178,7 +178,7 @@ public class AddRoomFrm extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "房间信息添加成功！");
             System.out.println("房间信息添加成功");
         } else {
-            JOptionPane.showMessageDialog(this, "房间信息添加失败,可能重复添加过了！");
+            JOptionPane.showMessageDialog(this, "房间信息添加失败,不能重复添加！");
         }
         roomDB.closeBaseDB();
         this.setVisible(true);
@@ -207,20 +207,23 @@ public class AddRoomFrm extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(AddRoomFrm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RoomInfoAdd.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(AddRoomFrm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RoomInfoAdd.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(AddRoomFrm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RoomInfoAdd.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(AddRoomFrm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RoomInfoAdd.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new AddRoomFrm().setVisible(true);
+                new RoomInfoAdd().setVisible(true);
             }
         });
     }

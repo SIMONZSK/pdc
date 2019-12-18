@@ -143,8 +143,12 @@ public class DbConnection {
                             + "	ROOMTYPE VARCHAR(32) not null,\n"
                             + "	ROOMCONDITION BOOLEAN\n"
                             + ")";
+                    String insertSql="insert into ROOMINFO (ROOMNAME,ROOMTYPE,ROOMCONDITION) values('1000','single room',true),('1001','single room',true),('1002','single room',true),\n" +
+"                                                              ('1003','double room',true),('1004','double room',true),\n" +
+"                                                              ('1005','family room',true)";
                     Statement statement = conn.createStatement();
                     statement.executeUpdate(sql);
+                    statement.executeUpdate(insertSql);
                     System.out.println("数据库没有这个ROOMINFO表，于是自动创建了！");
                 } catch (SQLException ex) {
                     Logger.getLogger(DbConnection.class.getName()).log(Level.SEVERE, null, ex);

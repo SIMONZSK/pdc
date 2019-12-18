@@ -215,7 +215,7 @@ public class MainFrm extends javax.swing.JFrame {
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
         // TODO add your handling code here:
-        AddRentFrm addRentFrame=new AddRentFrm();
+        RentInfoAdd addRentFrame=new RentInfoAdd();
         addRentFrame.setVisible(true);
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
@@ -266,7 +266,7 @@ public class MainFrm extends javax.swing.JFrame {
 
     private void jMenuItem11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem11ActionPerformed
         // TODO add your handling code here:
-        AddRoomFrm arf=new AddRoomFrm();
+        RoomInfoAdd arf=new RoomInfoAdd();
         arf.setVisible(true);
     }//GEN-LAST:event_jMenuItem11ActionPerformed
 

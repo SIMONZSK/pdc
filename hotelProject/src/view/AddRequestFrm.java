@@ -5,10 +5,8 @@
  */
 package view;
 
-import controller.RentDB;
 import controller.RequestDB;
 import javax.swing.JOptionPane;
-import model.RentInfo;
 import model.RequestInfo;
 import util.StringUtil;
 
