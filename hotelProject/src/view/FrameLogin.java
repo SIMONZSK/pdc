@@ -8,7 +8,6 @@ package view;
 import controller.UserController;
 import javax.swing.JOptionPane;
 import model.UserInfo;
-import model.UserType;
 import util.StringUtil;
 
 /**
