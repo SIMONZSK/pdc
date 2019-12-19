@@ -230,7 +230,7 @@ public class RentInfoAdd extends javax.swing.JFrame {
         String Name=NameTextField.getText().toString();
         String Rentdays=RentDaysTextField.getText().toString();  //不知道这里有没有问题，原本是Int
         String Money=MoneyTextField.getText().toString();
-        String Remark=RemarkTextField.getText().toString();
+        String Remark=RemarkTextField.getText();
         String selectedRentItem = (String)RentTypeComboBox.getSelectedItem();
         String selectedRoomItem = (String)RoomTypeComboBox.getSelectedItem();
         if(StringUtil.isEmpty(ID)){

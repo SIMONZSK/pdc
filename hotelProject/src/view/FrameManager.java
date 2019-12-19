@@ -253,7 +253,7 @@ public class FrameManager extends javax.swing.JFrame {
 
     private void jMenuItem10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem10ActionPerformed
         // TODO add your handling code here:
-        PayingManageFrm pmf=new PayingManageFrm();
+        PayingInfoList pmf=new PayingInfoList();
         pmf.setVisible(true);
         
     }//GEN-LAST:event_jMenuItem10ActionPerformed

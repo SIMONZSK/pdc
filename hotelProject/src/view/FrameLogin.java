@@ -222,7 +222,7 @@ public class FrameLogin extends javax.swing.JFrame {
             }
 
         } else if ("Manager".equals(selectedItem)) {
-            UserController userDB = new UserController();//获取查询到的实例
+            UserController userDB = new UserController();
             UserInfo userInfoTmp = new UserInfo();
             userInfoTmp.setUserName(userName);
             userInfoTmp.setPassword(password);
