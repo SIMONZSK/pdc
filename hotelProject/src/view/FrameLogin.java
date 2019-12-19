@@ -50,7 +50,7 @@ public class FrameLogin extends javax.swing.JFrame {
 
         UserLabel.setFont(new java.awt.Font("微软雅黑", 0, 14)); // NOI18N
         UserLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/015-smile.png"))); // NOI18N
-        UserLabel.setText("User:");
+        UserLabel.setText("Username:");
 
         PasswordLabel.setFont(new java.awt.Font("微软雅黑", 0, 14)); // NOI18N
         PasswordLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/014-shy.png"))); // NOI18N
@@ -100,28 +100,29 @@ public class FrameLogin extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(LoginButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 140, Short.MAX_VALUE)
                         .addComponent(RegisterButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addComponent(UserLabel)
-                        .addGap(80, 80, 80)
-                        .addComponent(userNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(TitleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(8, 8, 8))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(PasswordLabel)
+                                    .addGap(46, 46, 46))
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                    .addComponent(UserTypeLabel)
+                                    .addGap(44, 44, 44)))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(PasswordLabel)
-                                .addGap(46, 46, 46))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(UserTypeLabel)
-                                .addGap(44, 44, 44)))
+                                .addComponent(UserLabel)
+                                .addGap(42, 42, 42)))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(userNameTextField)
                             .addComponent(passwordTextField)
                             .addComponent(userTypeComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addGap(18, 18, 18)
-                .addComponent(RsetButton, javax.swing.GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE)
+                .addComponent(RsetButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -160,11 +161,11 @@ public class FrameLogin extends javax.swing.JFrame {
         String selectedItem = (String) userTypeComboBox.getSelectedItem();
         //Ensure the content of TextField is not empty
         if (StringUtil.isEmpty(userName)) {
-            JOptionPane.showMessageDialog(this, "用户名不能为空！");
+            JOptionPane.showMessageDialog(this, "Username should'nt be empty！");
             return;
         }
         if (StringUtil.isEmpty(password)) {
-            JOptionPane.showMessageDialog(this, "密码不能为空！");
+            JOptionPane.showMessageDialog(this, "Password should'nt be empty！");
             return;
         }
         //Transfer the info of user to user-database controller,call the login() method
@@ -179,9 +180,9 @@ public class FrameLogin extends javax.swing.JFrame {
         }
 
         if (userDB.register(userInfoTmp)) {
-            JOptionPane.showMessageDialog(this, "注册成功！");
+            JOptionPane.showMessageDialog(this, "Register Suceessfully！");
         } else {
-            JOptionPane.showMessageDialog(this, "注册失败！");
+            JOptionPane.showMessageDialog(this, "Register Failure,please input right account！");
         }
 
         userDB.closeBaseDB();
@@ -191,17 +192,17 @@ public class FrameLogin extends javax.swing.JFrame {
     }//GEN-LAST:event_RegisterButtonActionPerformed
 
     private void LoginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginButtonActionPerformed
-        
+
         //loginButton:System will check user's account in database,if it exist and with right password, it will login in hotel system Frmae
         String userName = userNameTextField.getText();
         String password = passwordTextField.getText();
         String selectedItem = (String) userTypeComboBox.getSelectedItem();
         if (StringUtil.isEmpty(userName)) {
-            JOptionPane.showMessageDialog(this, "用户名不能为空！");
+            JOptionPane.showMessageDialog(this, "Username should'nt be empty！");
             return;
         }
         if (StringUtil.isEmpty(password)) {
-            JOptionPane.showMessageDialog(this, "密码不能为空！");
+            JOptionPane.showMessageDialog(this, "Password should'nt be empty！");
             return;
         }
         if ("User".equals(selectedItem)) {
@@ -213,14 +214,14 @@ public class FrameLogin extends javax.swing.JFrame {
             boolean result = userDB.login(userInfoTmp);
             userDB.closeBaseDB();
             if (result) {
-                JOptionPane.showMessageDialog(this, "欢迎User 【" + selectedItem + "】：" + userName + "登录本酒店系统！");
+                JOptionPane.showMessageDialog(this, "Welcome 【" + selectedItem + "】：" + userName + " Login in Hotel-Booking-System！");
+                this.dispose();
+                FrameUser userFrame = new FrameUser();
 
             } else {
-                JOptionPane.showMessageDialog(this, "未注册or用户名或密码或身份错误,请重新输入！");
+                JOptionPane.showMessageDialog(this, "Unregistered or Account error, please re-enter!");
             }
-            this.dispose();
             
-            FrameUser userFrame = new FrameUser();
 
         } else if ("Manager".equals(selectedItem)) {
             UserController userDB = new UserController();//获取查询到的实例
@@ -231,13 +232,13 @@ public class FrameLogin extends javax.swing.JFrame {
             boolean result = userDB.login(userInfoTmp);
             userDB.closeBaseDB();
             if (result) {
-                JOptionPane.showMessageDialog(this, "欢迎Manager 【" + selectedItem + "】：" + userName + "登录本酒店系统！");
-                return;
+                JOptionPane.showMessageDialog(this, "Welcome 【" + selectedItem + "】：" + userName + " Login in Hotel-Booking-System！");
+                this.dispose();
+                FrameManager managerFrame = new FrameManager();
+
             } else {
-                JOptionPane.showMessageDialog(this, "未注册or用户名或密码或身份错误,请重新输入！");
+                JOptionPane.showMessageDialog(this, "Unregistered or Account error, please re-enter!");
             }
-            this.dispose();
-            FrameManager managerFrame = new FrameManager();
 
         }
 
