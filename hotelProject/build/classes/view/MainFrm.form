@@ -216,7 +216,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/images/&#x4f1a;&#x5458;.png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="&#x6b22;&#x8fce;zsk&#x767b;&#x9646;&#x672c;&#x7cfb;&#x7edf;&#xff01;"/>
+            <Property name="text" type="java.lang.String" value="&#x6b22;&#x8fce;&#x767b;&#x9646;&#x672c;&#x7cfb;&#x7edf;&#xff01;"/>
           </Properties>
         </Menu>
       </SubComponents>

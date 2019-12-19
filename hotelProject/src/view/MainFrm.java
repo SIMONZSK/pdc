@@ -189,7 +189,7 @@ public class MainFrm extends javax.swing.JFrame {
         jMenuBar1.add(jMenu4);
 
         jMenu6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/会员.png"))); // NOI18N
-        jMenu6.setText("欢迎zsk登陆本系统！");
+        jMenu6.setText("欢迎登陆本系统！");
         jMenuBar1.add(jMenu6);
 
         setJMenuBar(jMenuBar1);
