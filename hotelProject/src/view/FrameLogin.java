@@ -214,14 +214,13 @@ public class FrameLogin extends javax.swing.JFrame {
             boolean result = userDB.login(userInfoTmp);
             userDB.closeBaseDB();
             if (result) {
-                JOptionPane.showMessageDialog(this, "Welcome 【" + selectedItem + "】：" + userName + " Login in Hotel-Booking-System！");
+                JOptionPane.showMessageDialog(this, "Welcome User【" + userName + "】：" + " Login in Hotel-Booking-System！");
                 this.dispose();
                 FrameUser userFrame = new FrameUser();
 
             } else {
                 JOptionPane.showMessageDialog(this, "Unregistered or Account error, please re-enter!");
             }
-            
 
         } else if ("Manager".equals(selectedItem)) {
             UserController userDB = new UserController();//获取查询到的实例
@@ -232,7 +231,7 @@ public class FrameLogin extends javax.swing.JFrame {
             boolean result = userDB.login(userInfoTmp);
             userDB.closeBaseDB();
             if (result) {
-                JOptionPane.showMessageDialog(this, "Welcome 【" + selectedItem + "】：" + userName + " Login in Hotel-Booking-System！");
+                JOptionPane.showMessageDialog(this, "Welcome Manager【" + userName + "】：" + " Login in Hotel-Booking-System！");
                 this.dispose();
                 FrameManager managerFrame = new FrameManager();
 
