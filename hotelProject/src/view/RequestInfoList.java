@@ -5,7 +5,7 @@
  */
 package view;
 
-import controller.RequestDB;
+import controller.RequestController;
 import java.util.List;
 import java.util.Vector;
 import javax.swing.JOptionPane;
@@ -204,7 +204,7 @@ public class RequestInfoList extends javax.swing.JFrame {
         // TODO add your handling code here:
         DefaultTableModel table = (DefaultTableModel) ListTable.getModel();
         table.setRowCount(0);
-        RequestDB requestDB = new RequestDB();
+        RequestController requestDB = new RequestController();
         RequestInfo requestInfo = new RequestInfo();
         requestInfo.setName(SearchTextField.getText().toString());
         List<RequestInfo> requestList = requestDB.getRequestList(requestInfo);
@@ -235,7 +235,7 @@ public class RequestInfoList extends javax.swing.JFrame {
         }
         DefaultTableModel dft = (DefaultTableModel) ListTable.getModel();
         String SelectedId = dft.getValueAt(ListTable.getSelectedRow(), 0).toString();
-        RequestDB requestDB = new RequestDB();
+        RequestController requestDB = new RequestController();
         if (requestDB.delete(SelectedId)) {
             JOptionPane.showMessageDialog(this, "É¾³ý³É¹¦!");
         } else {

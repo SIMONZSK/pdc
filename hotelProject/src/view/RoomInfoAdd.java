@@ -5,7 +5,7 @@
  */
 package view;
 
-import controller.RoomDB;
+import controller.RoomController;
 import javax.swing.JOptionPane;
 import model.RentInfo;
 import model.RoomInfo;
@@ -173,7 +173,7 @@ public class RoomInfoAdd extends javax.swing.JFrame {
         if ("不空闲".equals(selectedRentItem)) {
             roomInfo.setRoomCondition(false);
         }
-        RoomDB roomDB = new RoomDB();
+        RoomController roomDB = new RoomController();
         if (roomDB.addRoom(roomInfo)) {
             JOptionPane.showMessageDialog(this, "房间信息添加成功！");
             System.out.println("房间信息添加成功");

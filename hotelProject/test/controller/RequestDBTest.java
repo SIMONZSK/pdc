@@ -31,7 +31,7 @@ public class RequestDBTest {
     public static void setUpClass() {
         
         try {
-            BaseDB baseDB = new BaseDB();
+            DatabaseController baseDB = new DatabaseController();
             Statement statement = baseDB.conn.createStatement();
             statement.executeUpdate("insert into REQUESTINFO values(\'test\',\'test\',\'test\')");
         } catch (SQLException ex) {
@@ -43,7 +43,7 @@ public class RequestDBTest {
     public static void tearDownClass() {
         
         try {
-            BaseDB baseDB = new BaseDB();
+            DatabaseController baseDB = new DatabaseController();
             Statement statement = baseDB.conn.createStatement();
             statement.executeUpdate("delete from REQUESTINFO where NAME==\'test\'");
         } catch (SQLException ex) {
@@ -69,7 +69,7 @@ public class RequestDBTest {
         requestInfo.setRequest("test");
         requestInfo.setName("test");
         requestInfo.setId("test");
-        RequestDB instance = new RequestDB();
+        RequestController instance = new RequestController();
         boolean expResult = true;
         boolean result = instance.addRequest(requestInfo);
         
@@ -86,7 +86,7 @@ public class RequestDBTest {
         System.out.println("getRequestList");
         RequestInfo requestInfo = new RequestInfo();
         requestInfo.setName("test");
-        RequestDB instance = new RequestDB();
+        RequestController instance = new RequestController();
         boolean expResult = true;
         boolean result=false;
         if(instance.getRequestList(requestInfo).size()>0)
@@ -103,7 +103,7 @@ public class RequestDBTest {
     public void testDelete() {
         System.out.println("delete");
         String name = "test";
-        RequestDB instance = new RequestDB();
+        RequestController instance = new RequestController();
         boolean expResult = false;
         boolean result = instance.delete(name);
         assertEquals(expResult, result);

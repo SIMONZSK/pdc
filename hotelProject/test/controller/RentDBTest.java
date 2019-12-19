@@ -31,7 +31,7 @@ public class RentDBTest {
     @BeforeClass
     public static void setUpClass() {
         try {
-            BaseDB baseDB = new BaseDB();
+            DatabaseController baseDB = new DatabaseController();
             Statement statement = baseDB.conn.createStatement();
             statement.executeUpdate("insert into RENTINFO VALUES(\'test\' ,\'test\',\'test\' ,\'test\',1,1,\'test\' )");
         } catch (SQLException ex) {
@@ -42,7 +42,7 @@ public class RentDBTest {
     @AfterClass
     public static void tearDownClass() {
         try {
-            BaseDB baseDB = new BaseDB();
+            DatabaseController baseDB = new DatabaseController();
             Statement statement = baseDB.conn.createStatement();
             statement.executeUpdate("delete from RENTINFO where GUESTIDNUMBER=\'test\'");
         } catch (SQLException ex) {
@@ -72,7 +72,7 @@ public class RentDBTest {
         rentInfo.setAntecedentMoney(1);
         rentInfo.setRentDays(1);
         rentInfo.setRemark("test");
-        RentDB instance = new RentDB();
+        RentController instance = new RentController();
         boolean expResult = true;
         boolean result = instance.addRent(rentInfo);
         assertEquals(expResult, result);
@@ -88,7 +88,7 @@ public class RentDBTest {
         System.out.println("getRentList");
         RentInfo rentInfo = new RentInfo();
         rentInfo.setGuestName("test");
-        RentDB instance = new RentDB();
+        RentController instance = new RentController();
         boolean expResult = true;
         boolean result=false;
         if(instance.getRentList(rentInfo).size()>0)
@@ -106,7 +106,7 @@ public class RentDBTest {
     public void testDelete() {
         System.out.println("delete");
         String guestIDnumber = "test";
-        RentDB instance = new RentDB();
+        RentController instance = new RentController();
         boolean expResult = true;
         boolean result = instance.delete(guestIDnumber);
         assertEquals(expResult, result);

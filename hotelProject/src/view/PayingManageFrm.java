@@ -5,7 +5,7 @@
  */
 package view;
 
-import controller.RentDB;
+import controller.RentController;
 import java.util.List;
 import java.util.Vector;
 import javax.swing.JOptionPane;
@@ -208,7 +208,7 @@ public class PayingManageFrm extends javax.swing.JFrame {
         // TODO add your handling code here:
         DefaultTableModel table = (DefaultTableModel) ListTable.getModel();
         table.setRowCount(0);
-        RentDB rentDB = new RentDB();
+        RentController rentDB = new RentController();
         RentInfo rentInfo = new RentInfo();
         rentInfo.setGuestName(SearchTextField.getText().toString());
         List<RentInfo> rentList = rentDB.getRentList(rentInfo);
@@ -276,7 +276,7 @@ public class PayingManageFrm extends javax.swing.JFrame {
         }
         DefaultTableModel dft = (DefaultTableModel) ListTable.getModel();
         String SelectedId = dft.getValueAt(ListTable.getSelectedRow(), 0).toString();
-        RentDB rentDB = new RentDB();
+        RentController rentDB = new RentController();
         if (rentDB.delete(SelectedId)) {
             JOptionPane.showMessageDialog(this, "É¾³ý³É¹¦!");
         } else {

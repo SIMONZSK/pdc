@@ -30,7 +30,7 @@ public class RoomDBTest {
     @BeforeClass
     public static void setUpClass() {
         try {
-            BaseDB baseDB=new BaseDB();
+            DatabaseController baseDB=new DatabaseController();
             Statement statement=baseDB.conn.createStatement();
             statement.executeUpdate("insert into ROOMINFO VALUES(\'test\',\'test\',true)");
         } catch (SQLException ex) {
@@ -41,7 +41,7 @@ public class RoomDBTest {
     @AfterClass
     public static void tearDownClass() {
          try {
-            BaseDB baseDB=new BaseDB();
+            DatabaseController baseDB=new DatabaseController();
             Statement statement=baseDB.conn.createStatement();
             statement.executeUpdate("delete from ROOMINFO where ROOMNAME=\'test\'");
             statement.executeUpdate("delete from ROOMINFO where ROOMNAME=\'test2\'");
@@ -68,7 +68,7 @@ public class RoomDBTest {
         roomInfo.setRoomName("test2");
         roomInfo.setRoomType("test2");
         roomInfo.setRoomCondition(true);
-        RoomDB instance = new RoomDB();
+        RoomController instance = new RoomController();
         boolean expResult = true;
         boolean result = instance.addRoom(roomInfo);
         assertEquals(expResult, result);
@@ -83,7 +83,7 @@ public class RoomDBTest {
         System.out.println("getRoomList");
         RoomInfo roomInfo = new RoomInfo();
         roomInfo.setRoomName("test");
-        RoomDB instance = new RoomDB();
+        RoomController instance = new RoomController();
         boolean expResult=true;
         boolean result=false;
         if(instance.getRoomList(roomInfo).size()>0) result=true;
@@ -99,7 +99,7 @@ public class RoomDBTest {
         System.out.println("getRoomNumber");
         RoomInfo roomInfo = new RoomInfo();
         roomInfo.setRoomType("test");
-        RoomDB instance = new RoomDB();
+        RoomController instance = new RoomController();
         boolean expResult=true;
         boolean result=false;
         if(instance.getRoomNumber(roomInfo)>0) result=true;

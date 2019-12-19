@@ -29,7 +29,7 @@ public class UserDBTest {
     @BeforeClass
     public static void setUpClass() {
         try {
-            BaseDB baseDB = new BaseDB();
+            DatabaseController baseDB = new DatabaseController();
             Statement statement = baseDB.conn.createStatement();
             statement.executeUpdate("insert into USERINFO values(\'test\' ,\'test\',true)");
         } catch (SQLException ex) {
@@ -41,7 +41,7 @@ public class UserDBTest {
     @AfterClass
     public static void tearDownClass() {
         try {
-            BaseDB baseDB = new BaseDB();
+            DatabaseController baseDB = new DatabaseController();
             Statement statement = baseDB.conn.createStatement();
             statement.executeUpdate("delete from USERINFO where NAME=\'test\'");
         } catch (SQLException ex) {
@@ -67,7 +67,7 @@ public class UserDBTest {
         userInfo.setUserName("test");
         userInfo.setPassword("test");
         userInfo.setUserType(true);
-        UserDB instance = new UserDB();
+        UserController instance = new UserController();
         boolean expResult = true;
         boolean result = instance.login(userInfo);
         assertEquals(expResult, result);
@@ -85,7 +85,7 @@ public class UserDBTest {
         userInfo.setUserName("test");
         userInfo.setPassword("test");
         userInfo.setUserType(true);
-        UserDB instance = new UserDB();
+        UserController instance = new UserController();
         boolean expResult = true;
         boolean result = instance.register(userInfo);
         assertEquals(expResult, result);

@@ -5,7 +5,7 @@
  */
 package view;
 
-import controller.RentDB;
+import controller.RentController;
 import javax.swing.JOptionPane;
 import model.RentInfo;
 import util.StringUtil;
@@ -258,7 +258,7 @@ public class RentInfoAdd extends javax.swing.JFrame {
         rentInfo.setAntecedentMoney(Integer.parseInt( Money ));
         rentInfo.setRemark(Remark);
         
-        RentDB rentDB=new RentDB();   
+        RentController rentDB=new RentController();   
         if(rentDB.addRent(rentInfo)){
             JOptionPane.showMessageDialog(this, "租房信息添加成功！");
             System.out.println("租房信息添加成功");
