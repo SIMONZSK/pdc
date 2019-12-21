@@ -11,7 +11,7 @@ public class FrameManager extends javax.swing.JFrame {
      */
     public FrameManager() {
         initComponents(); 
-        this.setVisible(true);
+//        this.setVisible(true);
     }
     
     

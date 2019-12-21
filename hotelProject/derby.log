@@ -1,19 +1,11 @@
-<<<<<<< HEAD
 ----------------------------------------------------------------
-Sat Dec 21 12:41:02 CST 2019:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-016f-26c2-3f3d-000007272358 
+Sat Dec 21 12:52:34 CST 2019:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-016f-26cc-ce41-000005bfa950 
 on database directory F:\GitKaraken\pdc\hotelProject\HotelDB with class loader sun.misc.Launcher$AppClassLoader@5c647e05 
 Loaded from file:/F:/GitKaraken/pdc/hotelProject/lib/derby.jar
-=======
-----------------------------------------------------------------
-Sat Dec 21 12:29:58 GMT+08:00 2019:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-016f-26b8-1c2c-00000d2e7d80 
-on database directory F:\GitKaraken\HotelProject\hotelProject\HotelDB with class loader sun.misc.Launcher$AppClassLoader@33909752 
-Loaded from file:/F:/GitKaraken/HotelProject/hotelProject/lib/derby.jar
->>>>>>> lrs
 java.vendor=Oracle Corporation
-java.runtime.version=1.8.0_161-b12
-user.dir=F:\GitKaraken\HotelProject\hotelProject
+java.runtime.version=1.8.0_211-b12
+user.dir=F:\GitKaraken\pdc\hotelProject
 os.name=Windows 10
 os.arch=amd64
 os.version=10.0
