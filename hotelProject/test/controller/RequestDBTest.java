@@ -45,7 +45,7 @@ public class RequestDBTest {
         try {
             DatabaseController baseDB = new DatabaseController();
             Statement statement = baseDB.conn.createStatement();
-            statement.executeUpdate("delete from REQUESTINFO where NAME==\'test\'");
+            statement.executeUpdate("delete from REQUESTINFO where NAME=\'test\'");
         } catch (SQLException ex) {
             Logger.getLogger(UserDBTest.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -104,7 +104,7 @@ public class RequestDBTest {
         System.out.println("delete");
         String name = "test";
         RequestController instance = new RequestController();
-        boolean expResult = false;
+        boolean expResult = true;
         boolean result = instance.delete(name);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.

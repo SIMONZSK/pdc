@@ -68,7 +68,7 @@ public class FrameManager extends javax.swing.JFrame {
 
         CheckInMenuItem.setFont(new java.awt.Font("Î¢ÈíÑÅºÚ", 0, 12)); // NOI18N
         CheckInMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Ôö¼Ó.png"))); // NOI18N
-        CheckInMenuItem.setText("Check-In");
+        CheckInMenuItem.setText("New Check-In");
         CheckInMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CheckInMenuItemActionPerformed(evt);
@@ -78,7 +78,7 @@ public class FrameManager extends javax.swing.JFrame {
 
         CheckInSearchMenuItem.setFont(new java.awt.Font("Î¢ÈíÑÅºÚ", 0, 12)); // NOI18N
         CheckInSearchMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/°ïÖú.png"))); // NOI18N
-        CheckInSearchMenuItem.setText("Query");
+        CheckInSearchMenuItem.setText("Query Rent Info");
         CheckInSearchMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CheckInSearchMenuItemActionPerformed(evt);
@@ -88,7 +88,7 @@ public class FrameManager extends javax.swing.JFrame {
 
         ReservationMenuItem.setFont(new java.awt.Font("Î¢ÈíÑÅºÚ", 0, 12)); // NOI18N
         ReservationMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/³É¹¦.png"))); // NOI18N
-        ReservationMenuItem.setText("Rreservation");
+        ReservationMenuItem.setText("Booking Manage");
         ReservationMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ReservationMenuItemActionPerformed(evt);
@@ -236,7 +236,7 @@ public class FrameManager extends javax.swing.JFrame {
 
     private void ReservationMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReservationMenuItemActionPerformed
         // Open ReserveInfoList and display the form;
-        ReserveInfoList rmf=new ReserveInfoList();
+        BookingInfoList rmf=new BookingInfoList();
         rmf.setVisible(true);
     }//GEN-LAST:event_ReservationMenuItemActionPerformed
 

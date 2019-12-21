@@ -45,10 +45,10 @@ public class FrameUser extends javax.swing.JFrame {
         SearchOrderMenuItem = new javax.swing.JMenuItem();
         CheckOutMenu = new javax.swing.JMenu();
         CheckOutMenuItem = new javax.swing.JMenuItem();
-        UserMenu = new javax.swing.JMenu();
-        HelpMenuItem = new javax.swing.JMenuItem();
         ServerMenu = new javax.swing.JMenu();
         ServerMenuItem = new javax.swing.JMenuItem();
+        UserMenu = new javax.swing.JMenu();
+        HelpMenuItem = new javax.swing.JMenuItem();
         ExitMenu = new javax.swing.JMenu();
         ExitMenuItem = new javax.swing.JMenuItem();
         WelcomMenu = new javax.swing.JMenu();
@@ -76,7 +76,7 @@ public class FrameUser extends javax.swing.JFrame {
         SingleRoomPictureLabel.setText("jLabel8");
 
         OneRoomRentButton.setFont(new java.awt.Font("Î¢ÈíÑÅºÚ", 0, 12)); // NOI18N
-        OneRoomRentButton.setText("Reservation");
+        OneRoomRentButton.setText("Booking");
         OneRoomRentButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 OneRoomRentButtonActionPerformed(evt);
@@ -84,7 +84,7 @@ public class FrameUser extends javax.swing.JFrame {
         });
 
         TwoRoomRentButton.setFont(new java.awt.Font("Î¢ÈíÑÅºÚ", 0, 12)); // NOI18N
-        TwoRoomRentButton.setText("Reservation");
+        TwoRoomRentButton.setText("Booking");
         TwoRoomRentButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TwoRoomRentButtonActionPerformed(evt);
@@ -92,7 +92,7 @@ public class FrameUser extends javax.swing.JFrame {
         });
 
         ThreeRoomRentButton.setFont(new java.awt.Font("Î¢ÈíÑÅºÚ", 0, 12)); // NOI18N
-        ThreeRoomRentButton.setText("Reservation");
+        ThreeRoomRentButton.setText("Booking");
         ThreeRoomRentButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ThreeRoomRentButtonActionPerformed(evt);
@@ -123,14 +123,20 @@ public class FrameUser extends javax.swing.JFrame {
             }
         });
 
+        OneLabel.setFont(new java.awt.Font("Î¢ÈíÑÅºÚ", 1, 14)); // NOI18N
+        OneLabel.setForeground(new java.awt.Color(0, 255, 153));
         OneLabel.setText("0");
 
+        TwoLabel.setFont(new java.awt.Font("Î¢ÈíÑÅºÚ", 1, 14)); // NOI18N
+        TwoLabel.setForeground(new java.awt.Color(0, 255, 153));
         TwoLabel.setText("0");
 
+        ThreeLabel.setFont(new java.awt.Font("Î¢ÈíÑÅºÚ", 1, 14)); // NOI18N
+        ThreeLabel.setForeground(new java.awt.Color(0, 255, 153));
         ThreeLabel.setText("0");
 
         OrderMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/003-calendar.png"))); // NOI18N
-        OrderMenu.setText("Reserve");
+        OrderMenu.setText("New Booking");
 
         SearchOrderMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/°ïÖú.png"))); // NOI18N
         SearchOrderMenuItem.setText("Query Booking Results");
@@ -157,20 +163,6 @@ public class FrameUser extends javax.swing.JFrame {
 
         jMenuBar1.add(CheckOutMenu);
 
-        UserMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/022-users-1.png"))); // NOI18N
-        UserMenu.setText("User Help");
-
-        HelpMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/°ïÖú.png"))); // NOI18N
-        HelpMenuItem.setText("The Manual");
-        HelpMenuItem.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                HelpMenuItemActionPerformed(evt);
-            }
-        });
-        UserMenu.add(HelpMenuItem);
-
-        jMenuBar1.add(UserMenu);
-
         ServerMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/023-users.png"))); // NOI18N
         ServerMenu.setText("Room Service");
 
@@ -184,6 +176,20 @@ public class FrameUser extends javax.swing.JFrame {
         ServerMenu.add(ServerMenuItem);
 
         jMenuBar1.add(ServerMenu);
+
+        UserMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/022-users-1.png"))); // NOI18N
+        UserMenu.setText("User Help");
+
+        HelpMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/°ïÖú.png"))); // NOI18N
+        HelpMenuItem.setText("Uing Help");
+        HelpMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                HelpMenuItemActionPerformed(evt);
+            }
+        });
+        UserMenu.add(HelpMenuItem);
+
+        jMenuBar1.add(UserMenu);
 
         ExitMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Ê§°Ü.png"))); // NOI18N
         ExitMenu.setText("Log Out");
@@ -273,7 +279,7 @@ public class FrameUser extends javax.swing.JFrame {
                 .addComponent(TwoLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(TwoRoomRentButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 181, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 183, Short.MAX_VALUE)
                 .addComponent(ThreeRoomLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(ThreeRoomRestButton2)
@@ -297,17 +303,17 @@ public class FrameUser extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void ThreeRoomRentButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ThreeRoomRentButtonActionPerformed
-        ReserveInfoAdd addrentfrm = new ReserveInfoAdd();
+        BookingInfoAdd addrentfrm = new BookingInfoAdd();
         addrentfrm.setVisible(true);   // Open ReserveInfoAdd and display the form;
     }//GEN-LAST:event_ThreeRoomRentButtonActionPerformed
 
     private void TwoRoomRentButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TwoRoomRentButtonActionPerformed
-        ReserveInfoAdd addrentfrm = new ReserveInfoAdd();
+        BookingInfoAdd addrentfrm = new BookingInfoAdd();
         addrentfrm.setVisible(true);   // Open ReserveInfoAdd and display the form:
     }//GEN-LAST:event_TwoRoomRentButtonActionPerformed
 
     private void OneRoomRentButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OneRoomRentButtonActionPerformed
-        ReserveInfoAdd addrentfrm = new ReserveInfoAdd();
+        BookingInfoAdd addrentfrm = new BookingInfoAdd();
         addrentfrm.setVisible(true);  // Open ReserveInfoAdd and display the form:
     }//GEN-LAST:event_OneRoomRentButtonActionPerformed
 
@@ -357,12 +363,12 @@ public class FrameUser extends javax.swing.JFrame {
 
     private void SearchOrderMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SearchOrderMenuItemActionPerformed
         // Open ReserveInfoCheck and display the form:
-        new ReserveInfoCheck().setVisible(true);
+        new BookingInfoCheck().setVisible(true);
     }//GEN-LAST:event_SearchOrderMenuItemActionPerformed
 
     private void CheckOutMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CheckOutMenuItemActionPerformed
         // Open ReserveInfoAdd and display the form::
-        new ReserveInfoAdd().setVisible(true);
+        new BookingInfoAdd().setVisible(true);
     }//GEN-LAST:event_CheckOutMenuItemActionPerformed
 
     private void ServerMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ServerMenuItemActionPerformed

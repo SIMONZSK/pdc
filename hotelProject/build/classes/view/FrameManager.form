@@ -53,7 +53,7 @@
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/images/&#x589e;&#x52a0;.png"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Check-In"/>
+                <Property name="text" type="java.lang.String" value="New Check-In"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CheckInMenuItemActionPerformed"/>
@@ -67,7 +67,7 @@
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/images/&#x5e2e;&#x52a9;.png"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Query"/>
+                <Property name="text" type="java.lang.String" value="Query Rent Info"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CheckInSearchMenuItemActionPerformed"/>
@@ -81,7 +81,7 @@
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/images/&#x6210;&#x529f;.png"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Rreservation"/>
+                <Property name="text" type="java.lang.String" value="Booking Manage"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ReservationMenuItemActionPerformed"/>

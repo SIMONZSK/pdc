@@ -27,7 +27,6 @@ public class RequestController extends DatabaseController {
                 return true;
             }
         } catch (SQLException ex) {
-            ex.getStackTrace();
         }
         return false;
     }

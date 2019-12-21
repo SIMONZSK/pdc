@@ -31,7 +31,7 @@ public class RentController extends DatabaseController {
             }
         } catch (SQLException ex) {
             // TODO Auto-generated catch block
-            ex.printStackTrace();
+//            ex.printStackTrace();
         }
         return false;
     }
@@ -58,8 +58,6 @@ public class RentController extends DatabaseController {
                 resultList.add(rent);
             }
         } catch (SQLException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
         }
         return resultList;
     }
@@ -74,29 +72,11 @@ public class RentController extends DatabaseController {
                 return true;
             }
         } catch (SQLException ex) {
-            ex.printStackTrace();
+            
         }
         return false;
     }
 
-//    public boolean update(RentInfo rentInfo) {
-//        String sql = "update RENTINFO set RENTTYPE=? ,ROOMTYPE=?,RENTDAYS=?,ANTECEDENTMONEY=?,REMARK=?   where GUESTIDNUMBER=?";
-//        try {
-//            PreparedStatement preparedStatement = conn.prepareStatement(sql);
-//            preparedStatement.setString(1, rentInfo.getRentType());
-//            preparedStatement.setString(2, rentInfo.getRoomType());
-//            preparedStatement.setInt(3, rentInfo.getRentDays());
-//            preparedStatement.setInt(4, rentInfo.getAntecedentMoney());
-//            preparedStatement.setString(5, rentInfo.getRemark());
-//            preparedStatement.setString(6, rentInfo.getGuestIDnumber());
-//            if (preparedStatement.executeUpdate() > 0) {
-//                return true;
-//            }
-//        } catch (SQLException e) {
-//            // TODO Auto-generated catch block
-//            e.printStackTrace();
-//        }
-//        return false;
-//    }
+
 
 }

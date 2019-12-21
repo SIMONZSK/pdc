@@ -14,7 +14,7 @@ import model.ReserveInfo;
 import util.StringUtil;
 
 
-public class ReserveController extends DatabaseController {
+public class BookingController extends DatabaseController {
     
     public boolean addRent(ReserveInfo reserveInfo) {
         //Insert data into the database table RESERVEINFO;

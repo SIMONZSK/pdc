@@ -2,7 +2,7 @@
 package view;
 
 import controller.RentController;
-import controller.ReserveController;
+import controller.BookingController;
 import java.util.List;
 import java.util.Vector;
 import javax.swing.JOptionPane;
@@ -10,12 +10,12 @@ import javax.swing.table.DefaultTableModel;
 import model.RentInfo;
 import model.ReserveInfo;
 
-public class ReserveInfoList extends javax.swing.JFrame {
+public class BookingInfoList extends javax.swing.JFrame {
 
     /**
      * Creates new form ReserveManageFrm
      */
-    public ReserveInfoList() {
+    public BookingInfoList() {
         initComponents();
     }
 
@@ -182,7 +182,7 @@ public class ReserveInfoList extends javax.swing.JFrame {
         int SelectedRentDays = Integer.parseInt(dft.getValueAt(ListTable.getSelectedRow(), 4).toString());
         String SelectedRemark = dft.getValueAt(ListTable.getSelectedRow(), 5).toString();
 
-        ReserveController reserveDB = new ReserveController();
+        BookingController reserveDB = new BookingController();
         if (reserveDB.delete(SelectedId)) {
 
             ReserveInfo reserveInfo = new ReserveInfo();
@@ -231,7 +231,7 @@ public class ReserveInfoList extends javax.swing.JFrame {
         }
         DefaultTableModel dft = (DefaultTableModel) ListTable.getModel();
         String SelectedId = dft.getValueAt(ListTable.getSelectedRow(), 0).toString();
-        ReserveController reserveDB = new ReserveController();
+        BookingController reserveDB = new BookingController();
         if (reserveDB.delete(SelectedId)) {
 
             JOptionPane.showMessageDialog(this, "Reservation rejected!");
@@ -261,7 +261,7 @@ public class ReserveInfoList extends javax.swing.JFrame {
     public void checkAll() {
         DefaultTableModel table = (DefaultTableModel) ListTable.getModel();
         table.setRowCount(0);
-        ReserveController reserveDB = new ReserveController();
+        BookingController reserveDB = new BookingController();
         ReserveInfo reserveInfo = new ReserveInfo();
         reserveInfo.setGuestName(null);
         List<ReserveInfo> rentList = reserveDB.getRentList(reserveInfo);
@@ -296,21 +296,23 @@ public class ReserveInfoList extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ReserveInfoList.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(BookingInfoList.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ReserveInfoList.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(BookingInfoList.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ReserveInfoList.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(BookingInfoList.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ReserveInfoList.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(BookingInfoList.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ReserveInfoList().setVisible(true);
+                new BookingInfoList().setVisible(true);
             }
         });
     }

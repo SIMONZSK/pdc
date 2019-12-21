@@ -17,7 +17,7 @@ public class DatabaseController {
 			conn.close();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.out.println("database connect failed");
 		}
 	}
     

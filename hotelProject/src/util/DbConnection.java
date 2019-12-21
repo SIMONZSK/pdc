@@ -95,7 +95,7 @@ public class DbConnection {
                             + ")";
                     Statement statement = conn.createStatement();
                     statement.executeUpdate(sql);
-                    System.out.println("数据库没有这个USERINFO表，于是自动创建了！");
+                    System.out.println("initialize table: USERINFO！");
                 } catch (SQLException ex) {
                     Logger.getLogger(DbConnection.class.getName()).log(Level.SEVERE, null, ex);
                 }
@@ -121,9 +121,11 @@ public class DbConnection {
                             + "	ANTECEDENTMONEY int ,\n"  
                             + "	REMARK VARCHAR(99)\n"
                             + ")";
+                    String insertSql="insert into RENTINFO values ('test','test','Hour Room','Single Room',2,100,'it is a test renting info!')";
                     Statement statement = conn.createStatement();
                     statement.executeUpdate(sql);
-                    System.out.println("数据库没有这个RENTINFO表，于是自动创建了！");
+                    statement.executeUpdate(insertSql);
+                    System.out.println("initialize table:RENTINFO！");
                 } catch (SQLException ex) {
                     Logger.getLogger(DbConnection.class.getName()).log(Level.SEVERE, null, ex);
                 }
@@ -143,13 +145,13 @@ public class DbConnection {
                             + "	ROOMTYPE VARCHAR(32) not null,\n"
                             + "	ROOMCONDITION BOOLEAN\n"
                             + ")";
-                    String insertSql="insert into ROOMINFO (ROOMNAME,ROOMTYPE,ROOMCONDITION) values('1000','single room',true),('1001','single room',true),('1002','single room',true),\n" +
-"                                                              ('1003','double room',true),('1004','double room',true),\n" +
-"                                                              ('1005','family room',true)";
+                    String insertSql="insert into ROOMINFO (ROOMNAME,ROOMTYPE,ROOMCONDITION) values('1000','Single Room',true),('1001','Single Room',true),('1002','Single Room',true),\n" +
+"                                                              ('1003','Double Room',true),('1004','Double Room',true),\n" +
+"                                                              ('1005','Family Room',true)";
                     Statement statement = conn.createStatement();
                     statement.executeUpdate(sql);
                     statement.executeUpdate(insertSql);
-                    System.out.println("数据库没有这个ROOMINFO表，于是自动创建了！");
+                    System.out.println("initialize table:ROOMINFO！");
                 } catch (SQLException ex) {
                     Logger.getLogger(DbConnection.class.getName()).log(Level.SEVERE, null, ex);
                 }
@@ -165,13 +167,15 @@ public class DbConnection {
                      */
                     String sql = "create table REQUESTINFO\n"
                             + "(\n"
-                            + "	REQUEST VARCHAR(32) not null,\n"
+                            + "	REQUEST VARCHAR(99) not null,\n"
                             + "	NAME VARCHAR(32) not null,\n"
                             + "	ID VARCHAR(32) not null\n"
                             + ")";
+                    String insertSql="insert into REQUESTINFO values ('test room service','tester','1')";
                     Statement statement = conn.createStatement();
                     statement.executeUpdate(sql);
-                    System.out.println("数据库没有这个REQUESTINFO表，于是自动创建了！");
+                    statement.executeUpdate(insertSql);
+                    System.out.println("initialize table:REQUESTINFO！");
                 } catch (SQLException ex) {
                     Logger.getLogger(DbConnection.class.getName()).log(Level.SEVERE, null, ex);
                 }
@@ -195,9 +199,11 @@ public class DbConnection {
                             + "	REMARK VARCHAR(99),\n"
                             + "	RESULT BOOLEAN \n"
                             + ")";
+                     String insertSql="insert into RESERVEINFO values ('123456','tester','Hour Room','Single Room',1,'test the booking room function',false)";
                     Statement statement = conn.createStatement();
                     statement.executeUpdate(sql);
-                    System.out.println("数据库没有这个RESERVEINFO表，于是自动创建了！");
+                    statement.executeUpdate(insertSql);
+                    System.out.println("initialize table:RESERVEINFO！");
                 } catch (SQLException ex) {
                     Logger.getLogger(DbConnection.class.getName()).log(Level.SEVERE, null, ex);
                 }
@@ -214,11 +220,10 @@ public class DbConnection {
         DbConnection dbc = new DbConnection();
         try {
             dbc.connectHotelDB();
-            System.out.println("数据库连接成功！");
+            System.out.println("database connect successfully!");
         } catch (Exception e) {
             // TODO Auto-generated catch block
-            e.printStackTrace();
-            System.out.println("数据库连接失败");
+            System.out.println("database connect failed!");
         }
 
         dbc.closeConnections();

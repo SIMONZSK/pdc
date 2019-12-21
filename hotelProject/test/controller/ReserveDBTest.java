@@ -67,7 +67,7 @@ public class ReserveDBTest {
         reserveInfo.setRentDays(1);
         reserveInfo.setRemark("test");
         reserveInfo.setResult(true);  
-        ReserveController instance = new ReserveController();
+        BookingController instance = new BookingController();
         boolean expResult = true;
         boolean result = instance.addRent(reserveInfo);
         assertEquals(expResult, result);
@@ -82,7 +82,7 @@ public class ReserveDBTest {
         System.out.println("getRentList");
         ReserveInfo reserveInfo = new ReserveInfo();
         reserveInfo.setGuestName("test");
-        ReserveController instance = new ReserveController();
+        BookingController instance = new BookingController();
         boolean expResult=true;
         boolean result=false;
         if(instance.getRentList(reserveInfo).size()>0) result=true;
@@ -100,7 +100,7 @@ public class ReserveDBTest {
         reserveInfo.setGuestIDnumber("test");
         reserveInfo.setResult(true);
         
-        ReserveController instance = new ReserveController();
+        BookingController instance = new BookingController();
         boolean expResult = false;
         boolean result = instance.getReserveResult(reserveInfo);
         assertEquals(expResult, result);
@@ -114,7 +114,7 @@ public class ReserveDBTest {
     public void testDelete() {
         System.out.println("delete");
         String guestIDnumber = "test";
-        ReserveController instance = new ReserveController();
+        BookingController instance = new BookingController();
         boolean expResult = true;
         boolean result = instance.delete(guestIDnumber);
         assertEquals(expResult, result);

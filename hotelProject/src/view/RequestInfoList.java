@@ -106,6 +106,11 @@ public class RequestInfoList extends javax.swing.JFrame {
             }
         });
         RequestInfoListTable.setRowHeight(30);
+        RequestInfoListTable.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                RequestInfoListTableMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(RequestInfoListTable);
 
         IDLabel.setFont(new java.awt.Font("Î¢ÈíÑÅºÚ", 0, 14)); // NOI18N
@@ -227,7 +232,7 @@ public class RequestInfoList extends javax.swing.JFrame {
             return;
         }
         DefaultTableModel dft = (DefaultTableModel) RequestInfoListTable.getModel();
-        String SelectedId = dft.getValueAt(RequestInfoListTable.getSelectedRow(), 0).toString();
+        String SelectedId = dft.getValueAt(RequestInfoListTable.getSelectedRow(), 1).toString();
         RequestController requestDB = new RequestController();
         if (requestDB.delete(SelectedId)) {
             JOptionPane.showMessageDialog(this, "Delete successful!");
@@ -235,9 +240,14 @@ public class RequestInfoList extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Deletion failed!");
         }
         requestDB.closeBaseDB();
-        //  setTable(new RentInfo());
         dft.setRowCount(0);
     }//GEN-LAST:event_DeleteButtonActionPerformed
+
+    private void RequestInfoListTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RequestInfoListTableMouseClicked
+        // TODO add your handling code here:
+        DefaultTableModel dft = (DefaultTableModel) RequestInfoListTable.getModel();
+        DeleteTextField.setText(dft.getValueAt(RequestInfoListTable.getSelectedRow(), 1).toString());
+    }//GEN-LAST:event_RequestInfoListTableMouseClicked
 
     /**
      * @param args the command line arguments
