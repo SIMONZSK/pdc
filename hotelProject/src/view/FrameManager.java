@@ -11,7 +11,7 @@ public class FrameManager extends javax.swing.JFrame {
      */
     public FrameManager() {
         initComponents(); 
-//        this.setVisible(true);
+        this.setVisible(true);
     }
     
     
@@ -56,7 +56,7 @@ public class FrameManager extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Hotel Manage System Main Frame");
-        setFont(new java.awt.Font("Î¢ï¿½ï¿½ï¿½Åºï¿½", 0, 10)); // NOI18N
+        setFont(new java.awt.Font("Î¢ÈíÑÅºÚ", 0, 10)); // NOI18N
         setLocation(new java.awt.Point(400, 200));
 
         ManagerHomePictureLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/househotel.jpg"))); // NOI18N
@@ -66,8 +66,8 @@ public class FrameManager extends javax.swing.JFrame {
         CheckInMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/042-folder.png"))); // NOI18N
         CheckInMenu.setText("Check-in");
 
-        CheckInMenuItem.setFont(new java.awt.Font("Î¢ï¿½ï¿½ï¿½Åºï¿½", 0, 12)); // NOI18N
-        CheckInMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ï¿½ï¿½ï¿½ï¿½.png"))); // NOI18N
+        CheckInMenuItem.setFont(new java.awt.Font("Î¢ÈíÑÅºÚ", 0, 12)); // NOI18N
+        CheckInMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Ôö¼Ó.png"))); // NOI18N
         CheckInMenuItem.setText("Check-In");
         CheckInMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -76,8 +76,8 @@ public class FrameManager extends javax.swing.JFrame {
         });
         CheckInMenu.add(CheckInMenuItem);
 
-        CheckInSearchMenuItem.setFont(new java.awt.Font("Î¢ï¿½ï¿½ï¿½Åºï¿½", 0, 12)); // NOI18N
-        CheckInSearchMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ï¿½É¹ï¿½.png"))); // NOI18N
+        CheckInSearchMenuItem.setFont(new java.awt.Font("Î¢ÈíÑÅºÚ", 0, 12)); // NOI18N
+        CheckInSearchMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/°ïÖú.png"))); // NOI18N
         CheckInSearchMenuItem.setText("Query");
         CheckInSearchMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -86,8 +86,8 @@ public class FrameManager extends javax.swing.JFrame {
         });
         CheckInMenu.add(CheckInSearchMenuItem);
 
-        ReservationMenuItem.setFont(new java.awt.Font("Î¢ï¿½ï¿½ï¿½Åºï¿½", 0, 12)); // NOI18N
-        ReservationMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Ì¾ï¿½ï¿½.png"))); // NOI18N
+        ReservationMenuItem.setFont(new java.awt.Font("Î¢ÈíÑÅºÚ", 0, 12)); // NOI18N
+        ReservationMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/³É¹¦.png"))); // NOI18N
         ReservationMenuItem.setText("Rreservation");
         ReservationMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -101,8 +101,8 @@ public class FrameManager extends javax.swing.JFrame {
         RoomInfoMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/050-home.png"))); // NOI18N
         RoomInfoMenu.setText("Room");
 
-        RoomInfoMenuItem.setFont(new java.awt.Font("Î¢ï¿½ï¿½ï¿½Åºï¿½", 0, 12)); // NOI18N
-        RoomInfoMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ï¿½ï¿½Ò³.png"))); // NOI18N
+        RoomInfoMenuItem.setFont(new java.awt.Font("Î¢ÈíÑÅºÚ", 0, 12)); // NOI18N
+        RoomInfoMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Ê×Ò³.png"))); // NOI18N
         RoomInfoMenuItem.setText("Room Information Query");
         RoomInfoMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -111,7 +111,7 @@ public class FrameManager extends javax.swing.JFrame {
         });
         RoomInfoMenu.add(RoomInfoMenuItem);
 
-        RoomInfoAddMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ï¿½ï¿½Ò³.png"))); // NOI18N
+        RoomInfoAddMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Ê×Ò³.png"))); // NOI18N
         RoomInfoAddMenuItem.setText("Room Information Addition");
         RoomInfoAddMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -125,7 +125,7 @@ public class FrameManager extends javax.swing.JFrame {
         CustomerMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/023-users.png"))); // NOI18N
         CustomerMenu.setText("Customer ");
 
-        CustomerInfoMenuItem.setFont(new java.awt.Font("Î¢ï¿½ï¿½ï¿½Åºï¿½", 0, 12)); // NOI18N
+        CustomerInfoMenuItem.setFont(new java.awt.Font("Î¢ÈíÑÅºÚ", 0, 12)); // NOI18N
         CustomerInfoMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/022-users-1.png"))); // NOI18N
         CustomerInfoMenuItem.setText("Customer Information Query");
         CustomerInfoMenuItem.addActionListener(new java.awt.event.ActionListener() {
@@ -135,7 +135,7 @@ public class FrameManager extends javax.swing.JFrame {
         });
         CustomerMenu.add(CustomerInfoMenuItem);
 
-        RoomServerMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ï¿½ï¿½ï¿½ï¿½.png"))); // NOI18N
+        RoomServerMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/¹«¸æ.png"))); // NOI18N
         RoomServerMenuItem.setText("Room Service Management");
         RoomServerMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -144,8 +144,8 @@ public class FrameManager extends javax.swing.JFrame {
         });
         CustomerMenu.add(RoomServerMenuItem);
 
-        InvoicingMenuItem.setFont(new java.awt.Font("Î¢ï¿½ï¿½ï¿½Åºï¿½", 0, 12)); // NOI18N
-        InvoicingMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ï¿½Å»ï¿½È¯.png"))); // NOI18N
+        InvoicingMenuItem.setFont(new java.awt.Font("Î¢ÈíÑÅºÚ", 0, 12)); // NOI18N
+        InvoicingMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ÓÅ»ÝÈ¯.png"))); // NOI18N
         InvoicingMenuItem.setText("Customer Checkout");
         InvoicingMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -159,8 +159,8 @@ public class FrameManager extends javax.swing.JFrame {
         SystemMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/006-settings.png"))); // NOI18N
         SystemMenu.setText("System Settings");
 
-        ExitMenuItem.setFont(new java.awt.Font("Î¢ï¿½ï¿½ï¿½Åºï¿½", 0, 12)); // NOI18N
-        ExitMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Ê§ï¿½ï¿½.png"))); // NOI18N
+        ExitMenuItem.setFont(new java.awt.Font("Î¢ÈíÑÅºÚ", 0, 12)); // NOI18N
+        ExitMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Ê§°Ü.png"))); // NOI18N
         ExitMenuItem.setText("Log Out");
         ExitMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -169,8 +169,8 @@ public class FrameManager extends javax.swing.JFrame {
         });
         SystemMenu.add(ExitMenuItem);
 
-        HelpMenuItem.setFont(new java.awt.Font("Î¢ï¿½ï¿½ï¿½Åºï¿½", 0, 12)); // NOI18N
-        HelpMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ï¿½ï¿½ï¿½ï¿½.png"))); // NOI18N
+        HelpMenuItem.setFont(new java.awt.Font("Î¢ÈíÑÅºÚ", 0, 12)); // NOI18N
+        HelpMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/°ïÖú.png"))); // NOI18N
         HelpMenuItem.setText("Help Manual");
         HelpMenuItem.setToolTipText("");
         HelpMenuItem.addActionListener(new java.awt.event.ActionListener() {
@@ -182,7 +182,7 @@ public class FrameManager extends javax.swing.JFrame {
 
         jMenuBar1.add(SystemMenu);
 
-        WelcomeMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ï¿½ï¿½Ô±.png"))); // NOI18N
+        WelcomeMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/»áÔ±.png"))); // NOI18N
         WelcomeMenu.setText("Welcome To The System!");
         jMenuBar1.add(WelcomeMenu);
 
