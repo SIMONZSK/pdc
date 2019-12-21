@@ -351,7 +351,7 @@ public class FrameUser extends javax.swing.JFrame {
 
     private void HelpMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HelpMenuItemActionPerformed
         //Display manual;
-        String message = "This is the manual!\n Hour Room$60/Ð¡Ê± \n Standard Room$100/Ìì \n Single rooms are paid according to the time of use  \n  Double room costs 50% more than a single room \n Family Room pay 100% more than single rooms";
+        String message = "This is the manual!\n Hour Room$60/H \n Standard Room$100/D \n Single rooms are paid according to the time of use  \n  Double room costs 50% more than a single room \n Family Room pay 100% more than single rooms";
         JOptionPane.showMessageDialog(this, message);
     }//GEN-LAST:event_HelpMenuItemActionPerformed
 
