@@ -1,18 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package view;
 
 import controller.RoomController;
 import javax.swing.JOptionPane;
 import model.RoomInfo;
 
-/**
- *
- * @author GP62MVR
- */
+
 public class FrameUser extends javax.swing.JFrame {
 
     /**
@@ -32,12 +25,12 @@ public class FrameUser extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
+        DoubleRoomPictureLabel = new javax.swing.JLabel();
+        FamilyRoomPictureLabel = new javax.swing.JLabel();
+        DoubleRoomLabel = new javax.swing.JLabel();
+        ThreeRoomLabel = new javax.swing.JLabel();
+        OneRoomLabel = new javax.swing.JLabel();
+        SingleRoomPictureLabel = new javax.swing.JLabel();
         OneRoomRentButton = new javax.swing.JButton();
         TwoRoomRentButton = new javax.swing.JButton();
         ThreeRoomRentButton = new javax.swing.JButton();
@@ -49,41 +42,41 @@ public class FrameUser extends javax.swing.JFrame {
         ThreeLabel = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         OrderMenu = new javax.swing.JMenu();
-        jMenuItem4 = new javax.swing.JMenuItem();
-        jMenu3 = new javax.swing.JMenu();
-        jMenuItem3 = new javax.swing.JMenuItem();
-        jMenu1 = new javax.swing.JMenu();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        jMenu4 = new javax.swing.JMenu();
-        jMenuItem5 = new javax.swing.JMenuItem();
-        jMenu5 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenu6 = new javax.swing.JMenu();
+        SearchOrderMenuItem = new javax.swing.JMenuItem();
+        CheckOutMenu = new javax.swing.JMenu();
+        CheckOutMenuItem = new javax.swing.JMenuItem();
+        UserMenu = new javax.swing.JMenu();
+        HelpMenuItem = new javax.swing.JMenuItem();
+        ServerMenu = new javax.swing.JMenu();
+        ServerMenuItem = new javax.swing.JMenuItem();
+        ExitMenu = new javax.swing.JMenu();
+        ExitMenuItem = new javax.swing.JMenuItem();
+        WelcomMenu = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("UserMain");
         setLocation(new java.awt.Point(400, 100));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/双人房.png"))); // NOI18N
-        jLabel1.setText("jLabel1");
+        DoubleRoomPictureLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/双人房.png"))); // NOI18N
+        DoubleRoomPictureLabel.setText("jLabel1");
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/家庭房.png"))); // NOI18N
-        jLabel2.setText("jLabel2");
+        FamilyRoomPictureLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/家庭房.png"))); // NOI18N
+        FamilyRoomPictureLabel.setText("jLabel2");
 
-        jLabel3.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
-        jLabel3.setText("双人房");
+        DoubleRoomLabel.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
+        DoubleRoomLabel.setText("Double Room");
 
-        jLabel6.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
-        jLabel6.setText("家庭间");
+        ThreeRoomLabel.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
+        ThreeRoomLabel.setText("Family room");
 
-        jLabel4.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
-        jLabel4.setText("单人间");
+        OneRoomLabel.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
+        OneRoomLabel.setText("SingleRoom");
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/单人房.png"))); // NOI18N
-        jLabel8.setText("jLabel8");
+        SingleRoomPictureLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/单人房.png"))); // NOI18N
+        SingleRoomPictureLabel.setText("jLabel8");
 
         OneRoomRentButton.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
-        OneRoomRentButton.setText("预订");
+        OneRoomRentButton.setText("Reservation");
         OneRoomRentButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 OneRoomRentButtonActionPerformed(evt);
@@ -91,7 +84,7 @@ public class FrameUser extends javax.swing.JFrame {
         });
 
         TwoRoomRentButton.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
-        TwoRoomRentButton.setText("预订");
+        TwoRoomRentButton.setText("Reservation");
         TwoRoomRentButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TwoRoomRentButtonActionPerformed(evt);
@@ -99,7 +92,7 @@ public class FrameUser extends javax.swing.JFrame {
         });
 
         ThreeRoomRentButton.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
-        ThreeRoomRentButton.setText("预订");
+        ThreeRoomRentButton.setText("Reservation");
         ThreeRoomRentButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ThreeRoomRentButtonActionPerformed(evt);
@@ -107,7 +100,7 @@ public class FrameUser extends javax.swing.JFrame {
         });
 
         OneRoomRestButton.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
-        OneRoomRestButton.setText("查询剩余房间");
+        OneRoomRestButton.setText("Query Remaining Rooms");
         OneRoomRestButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 OneRoomRestButtonActionPerformed(evt);
@@ -115,7 +108,7 @@ public class FrameUser extends javax.swing.JFrame {
         });
 
         ThreeRoomRestButton2.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
-        ThreeRoomRestButton2.setText("查询剩余房间");
+        ThreeRoomRestButton2.setText("Query Remaining Rooms");
         ThreeRoomRestButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ThreeRoomRestButton2ActionPerformed(evt);
@@ -123,7 +116,7 @@ public class FrameUser extends javax.swing.JFrame {
         });
 
         TwoRoomRestButton.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
-        TwoRoomRestButton.setText("查询剩余房间");
+        TwoRoomRestButton.setText("Query Remaining Rooms");
         TwoRoomRestButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TwoRoomRestButtonActionPerformed(evt);
@@ -137,84 +130,84 @@ public class FrameUser extends javax.swing.JFrame {
         ThreeLabel.setText("0");
 
         OrderMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/003-calendar.png"))); // NOI18N
-        OrderMenu.setText("预订管理");
+        OrderMenu.setText("Reserve");
 
-        jMenuItem4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/帮助.png"))); // NOI18N
-        jMenuItem4.setText("查询预订结果");
-        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+        SearchOrderMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/帮助.png"))); // NOI18N
+        SearchOrderMenuItem.setText("Query Booking Results");
+        SearchOrderMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem4ActionPerformed(evt);
+                SearchOrderMenuItemActionPerformed(evt);
             }
         });
-        OrderMenu.add(jMenuItem4);
+        OrderMenu.add(SearchOrderMenuItem);
 
         jMenuBar1.add(OrderMenu);
 
-        jMenu3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/创作.png"))); // NOI18N
-        jMenu3.setText("退房登记");
+        CheckOutMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/创作.png"))); // NOI18N
+        CheckOutMenu.setText("Check-out");
 
-        jMenuItem3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/创作.png"))); // NOI18N
-        jMenuItem3.setText("填写退房登记表");
-        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+        CheckOutMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/创作.png"))); // NOI18N
+        CheckOutMenuItem.setText("Check-out Form");
+        CheckOutMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem3ActionPerformed(evt);
+                CheckOutMenuItemActionPerformed(evt);
             }
         });
-        jMenu3.add(jMenuItem3);
+        CheckOutMenu.add(CheckOutMenuItem);
 
-        jMenuBar1.add(jMenu3);
+        jMenuBar1.add(CheckOutMenu);
 
-        jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/022-users-1.png"))); // NOI18N
-        jMenu1.setText("用户帮助");
+        UserMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/022-users-1.png"))); // NOI18N
+        UserMenu.setText("User Help");
 
-        jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/帮助.png"))); // NOI18N
-        jMenuItem2.setText("使用手册");
-        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+        HelpMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/帮助.png"))); // NOI18N
+        HelpMenuItem.setText("The Manual");
+        HelpMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem2ActionPerformed(evt);
+                HelpMenuItemActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem2);
+        UserMenu.add(HelpMenuItem);
 
-        jMenuBar1.add(jMenu1);
+        jMenuBar1.add(UserMenu);
 
-        jMenu4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/023-users.png"))); // NOI18N
-        jMenu4.setText("服务申请");
+        ServerMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/023-users.png"))); // NOI18N
+        ServerMenu.setText("Room Service");
 
-        jMenuItem5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/015-smile.png"))); // NOI18N
-        jMenuItem5.setText("客房服务请求");
-        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
+        ServerMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/015-smile.png"))); // NOI18N
+        ServerMenuItem.setText("Room Service Request");
+        ServerMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem5ActionPerformed(evt);
+                ServerMenuItemActionPerformed(evt);
             }
         });
-        jMenu4.add(jMenuItem5);
+        ServerMenu.add(ServerMenuItem);
 
-        jMenuBar1.add(jMenu4);
+        jMenuBar1.add(ServerMenu);
 
-        jMenu5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/失败.png"))); // NOI18N
-        jMenu5.setText("退出系统");
-        jMenu5.addActionListener(new java.awt.event.ActionListener() {
+        ExitMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/失败.png"))); // NOI18N
+        ExitMenu.setText("Log Out");
+        ExitMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenu5ActionPerformed(evt);
+                ExitMenuActionPerformed(evt);
             }
         });
 
-        jMenuItem1.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
-        jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/失败.png"))); // NOI18N
-        jMenuItem1.setText("退出系统");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+        ExitMenuItem.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
+        ExitMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/失败.png"))); // NOI18N
+        ExitMenuItem.setText("Exit");
+        ExitMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
+                ExitMenuItemActionPerformed(evt);
             }
         });
-        jMenu5.add(jMenuItem1);
+        ExitMenu.add(ExitMenuItem);
 
-        jMenuBar1.add(jMenu5);
+        jMenuBar1.add(ExitMenu);
 
-        jMenu6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/会员.png"))); // NOI18N
-        jMenu6.setText("欢迎光临本酒店");
-        jMenuBar1.add(jMenu6);
+        WelcomMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/会员.png"))); // NOI18N
+        WelcomMenu.setText("Welcome To Our Hotel");
+        jMenuBar1.add(WelcomMenu);
 
         setJMenuBar(jMenuBar1);
 
@@ -223,80 +216,80 @@ public class FrameUser extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(662, Short.MAX_VALUE)
+                .addContainerGap(659, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel4)
-                        .addGap(140, 140, 140))
+                        .addComponent(OneRoomLabel)
+                        .addGap(81, 81, 81))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(ThreeRoomRentButton, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(TwoRoomRentButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(OneRoomRestButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(ThreeRoomRestButton2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(TwoRoomRestButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(OneRoomRentButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(79, 79, 79))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addGap(137, 137, 137))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel6)
-                        .addGap(134, 134, 134))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(OneRoomRentButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(OneRoomRestButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(TwoRoomRestButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(TwoRoomRentButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(ThreeRoomRestButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(ThreeRoomRentButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(31, 31, 31))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(OneLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(136, 136, 136))
+                        .addGap(100, 100, 100))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(TwoLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(130, 130, 130))
+                        .addGap(99, 99, 99))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(DoubleRoomLabel)
+                        .addGap(81, 81, 81))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(ThreeRoomLabel)
+                        .addGap(81, 81, 81))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(ThreeLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(129, 129, 129))))
+                        .addGap(100, 100, 100))))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                        .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 627, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                        .addComponent(DoubleRoomPictureLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                        .addComponent(SingleRoomPictureLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 627, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(FamilyRoomPictureLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                     .addGap(57, 228, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(48, 48, 48)
-                .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(42, 42, 42)
+                .addComponent(OneRoomLabel)
+                .addGap(18, 18, 18)
                 .addComponent(OneRoomRestButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(OneLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(OneRoomRentButton)
-                .addGap(112, 112, 112)
-                .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(106, 106, 106)
+                .addComponent(DoubleRoomLabel)
+                .addGap(18, 18, 18)
                 .addComponent(TwoRoomRestButton)
                 .addGap(4, 4, 4)
                 .addComponent(TwoLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(TwoRoomRentButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 175, Short.MAX_VALUE)
-                .addComponent(jLabel6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 181, Short.MAX_VALUE)
+                .addComponent(ThreeRoomLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(ThreeRoomRestButton2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(ThreeLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(7, 7, 7)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(ThreeRoomRentButton)
-                .addGap(71, 71, 71))
+                .addGap(72, 72, 72))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(SingleRoomPictureLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(DoubleRoomPictureLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(FamilyRoomPictureLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
@@ -305,32 +298,33 @@ public class FrameUser extends javax.swing.JFrame {
 
     private void ThreeRoomRentButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ThreeRoomRentButtonActionPerformed
         ReserveInfoAdd addrentfrm = new ReserveInfoAdd();
-        addrentfrm.setVisible(true);   // TODO add your handling code here:
+        addrentfrm.setVisible(true);   // Open ReserveInfoAdd and display the form;
     }//GEN-LAST:event_ThreeRoomRentButtonActionPerformed
 
     private void TwoRoomRentButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TwoRoomRentButtonActionPerformed
         ReserveInfoAdd addrentfrm = new ReserveInfoAdd();
-        addrentfrm.setVisible(true);   // TODO add your handling code here:
+        addrentfrm.setVisible(true);   // Open ReserveInfoAdd and display the form:
     }//GEN-LAST:event_TwoRoomRentButtonActionPerformed
 
     private void OneRoomRentButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OneRoomRentButtonActionPerformed
         ReserveInfoAdd addrentfrm = new ReserveInfoAdd();
-        addrentfrm.setVisible(true);  // TODO add your handling code here:
+        addrentfrm.setVisible(true);  // Open ReserveInfoAdd and display the form:
     }//GEN-LAST:event_OneRoomRentButtonActionPerformed
 
-    private void jMenu5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu5ActionPerformed
+    private void ExitMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitMenuActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenu5ActionPerformed
+    }//GEN-LAST:event_ExitMenuActionPerformed
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        String message2 = "确定退出本系统吗？";
+    private void ExitMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitMenuItemActionPerformed
+        String message2 = "Are you sure you want to quit the system?";
         if (JOptionPane.showConfirmDialog(this, message2) == JOptionPane.OK_OPTION) {
-            System.exit(0);        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
+            System.exit(0);        // Prompt whether to exit the system, and if so, exit the system:
+    }//GEN-LAST:event_ExitMenuItemActionPerformed
     }
     private void OneRoomRestButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OneRoomRestButtonActionPerformed
+        //Check the number of single rooms available ;
         RoomInfo roomInfo = new RoomInfo();
-        roomInfo.setRoomType("单人间");
+        roomInfo.setRoomType("Single Room");
         RoomController roomDB = new RoomController();
         String i =String.valueOf(roomDB.getRoomNumber(roomInfo));
         OneLabel.setText(i);
@@ -338,41 +332,43 @@ public class FrameUser extends javax.swing.JFrame {
     }//GEN-LAST:event_OneRoomRestButtonActionPerformed
 
     private void ThreeRoomRestButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ThreeRoomRestButton2ActionPerformed
+        //Check the number of double rooms available ;
         RoomInfo roomInfo = new RoomInfo();
-        roomInfo.setRoomType("家庭间");
+        roomInfo.setRoomType("Family Room");
         RoomController roomDB = new RoomController();
         String i =String.valueOf(roomDB.getRoomNumber(roomInfo));
         ThreeLabel.setText(i);
     }//GEN-LAST:event_ThreeRoomRestButton2ActionPerformed
 
     private void TwoRoomRestButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TwoRoomRestButtonActionPerformed
+        //Check the number of family rooms available ;
         RoomInfo roomInfo = new RoomInfo();
-        roomInfo.setRoomType("双人间");
+        roomInfo.setRoomType("Double Room");
         RoomController roomDB = new RoomController();
         String i =String.valueOf(roomDB.getRoomNumber(roomInfo));
         TwoLabel.setText(i);
     }//GEN-LAST:event_TwoRoomRestButtonActionPerformed
 
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-        // TODO add your handling code here:
-        String message = "这里面写的是使用手册！\n 钟点房$60/小时 \n 标准房$100/天 \n 单人间按使用时间结算  \n 双人间比单人间多付50% \n家庭间比单人间多付100%";
+    private void HelpMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HelpMenuItemActionPerformed
+        //Display manual;
+        String message = "This is the manual!\n Hour Room$60/H \n Standard Room$100/D \n Single rooms are paid according to the time of use  \n  Double room costs 50% more than a single room \n Family Room pay 100% more than single rooms";
         JOptionPane.showMessageDialog(this, message);
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
+    }//GEN-LAST:event_HelpMenuItemActionPerformed
 
-    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
-        // TODO add your handling code here: 预订结果查询：就是去查一下他登记的信息的getResult状态是否为true
+    private void SearchOrderMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SearchOrderMenuItemActionPerformed
+        // Open ReserveInfoCheck and display the form:
         new ReserveInfoCheck().setVisible(true);
-    }//GEN-LAST:event_jMenuItem4ActionPerformed
+    }//GEN-LAST:event_SearchOrderMenuItemActionPerformed
 
-    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
-        // TODO add your handling code here:
+    private void CheckOutMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CheckOutMenuItemActionPerformed
+        // Open ReserveInfoAdd and display the form::
         new ReserveInfoAdd().setVisible(true);
-    }//GEN-LAST:event_jMenuItem3ActionPerformed
+    }//GEN-LAST:event_CheckOutMenuItemActionPerformed
 
-    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
-        // TODO add your handling code here:
+    private void ServerMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ServerMenuItemActionPerformed
+        // Open ReserveInfoAdd and display the form:
         new RequestInfoAdd().setVisible(true);
-    }//GEN-LAST:event_jMenuItem5ActionPerformed
+    }//GEN-LAST:event_ServerMenuItemActionPerformed
 
     /**
      * @param args the command line arguments
@@ -411,32 +407,32 @@ public class FrameUser extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenu CheckOutMenu;
+    private javax.swing.JMenuItem CheckOutMenuItem;
+    private javax.swing.JLabel DoubleRoomLabel;
+    private javax.swing.JLabel DoubleRoomPictureLabel;
+    private javax.swing.JMenu ExitMenu;
+    private javax.swing.JMenuItem ExitMenuItem;
+    private javax.swing.JLabel FamilyRoomPictureLabel;
+    private javax.swing.JMenuItem HelpMenuItem;
     private javax.swing.JLabel OneLabel;
+    private javax.swing.JLabel OneRoomLabel;
     private javax.swing.JButton OneRoomRentButton;
     private javax.swing.JButton OneRoomRestButton;
     private javax.swing.JMenu OrderMenu;
+    private javax.swing.JMenuItem SearchOrderMenuItem;
+    private javax.swing.JMenu ServerMenu;
+    private javax.swing.JMenuItem ServerMenuItem;
+    private javax.swing.JLabel SingleRoomPictureLabel;
     private javax.swing.JLabel ThreeLabel;
+    private javax.swing.JLabel ThreeRoomLabel;
     private javax.swing.JButton ThreeRoomRentButton;
     private javax.swing.JButton ThreeRoomRestButton2;
     private javax.swing.JLabel TwoLabel;
     private javax.swing.JButton TwoRoomRentButton;
     private javax.swing.JButton TwoRoomRestButton;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu3;
-    private javax.swing.JMenu jMenu4;
-    private javax.swing.JMenu jMenu5;
-    private javax.swing.JMenu jMenu6;
+    private javax.swing.JMenu UserMenu;
+    private javax.swing.JMenu WelcomMenu;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JMenuItem jMenuItem5;
     // End of variables declaration//GEN-END:variables
 }

@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package view;
 
 import controller.RentController;
@@ -12,16 +8,13 @@ import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import model.RentInfo;
 
-/**
- *
- * @author hasee
- */
-public class PayingManageFrm extends javax.swing.JFrame {
+
+public class PayingInfoList extends javax.swing.JFrame {
 
     /**
      * Creates new form PayingManageFrm
      */
-    public PayingManageFrm() {
+    public PayingInfoList() {
         initComponents();
     }
 
@@ -34,29 +27,29 @@ public class PayingManageFrm extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel4 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        DeleteNoteLabel = new javax.swing.JLabel();
+        SearchNameLabel = new javax.swing.JLabel();
         SearchTextField = new javax.swing.JTextField();
         SearchButton = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        ListTable = new javax.swing.JTable();
-        jLabel2 = new javax.swing.JLabel();
-        SecondLabel = new javax.swing.JLabel();
+        PayingInfoListTable = new javax.swing.JTable();
+        NoteLabel = new javax.swing.JLabel();
+        SelectNameLabel = new javax.swing.JLabel();
         DeleteTextField = new javax.swing.JTextField();
         DeleteButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("结账管理");
+        setTitle("Invoicing management");
         setLocation(new java.awt.Point(480, 280));
 
-        jLabel4.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/提示.png"))); // NOI18N
-        jLabel4.setText("（删除表中选中的数据）");
+        DeleteNoteLabel.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
+        DeleteNoteLabel.setForeground(new java.awt.Color(102, 102, 102));
+        DeleteNoteLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/提示.png"))); // NOI18N
+        DeleteNoteLabel.setText("（Delete the selected data in the table）");
 
-        jLabel1.setFont(new java.awt.Font("微软雅黑", 0, 14)); // NOI18N
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/身份证正面.png"))); // NOI18N
-        jLabel1.setText("请输入身份证姓名：");
+        SearchNameLabel.setFont(new java.awt.Font("微软雅黑", 0, 14)); // NOI18N
+        SearchNameLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/身份证正面.png"))); // NOI18N
+        SearchNameLabel.setText("Please enter your ID name:");
 
         SearchTextField.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
         SearchTextField.setForeground(new java.awt.Color(153, 153, 153));
@@ -76,8 +69,8 @@ public class PayingManageFrm extends javax.swing.JFrame {
             }
         });
 
-        ListTable.setFont(new java.awt.Font("微软雅黑", 0, 14)); // NOI18N
-        ListTable.setModel(new javax.swing.table.DefaultTableModel(
+        PayingInfoListTable.setFont(new java.awt.Font("微软雅黑", 0, 14)); // NOI18N
+        PayingInfoListTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
                 {null, null, null, null, null},
@@ -114,21 +107,21 @@ public class PayingManageFrm extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        ListTable.addMouseListener(new java.awt.event.MouseAdapter() {
+        PayingInfoListTable.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                ListTableMouseClicked(evt);
+                PayingInfoListTableMouseClicked(evt);
             }
         });
-        jScrollPane1.setViewportView(ListTable);
+        jScrollPane1.setViewportView(PayingInfoListTable);
 
-        jLabel2.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/提示.png"))); // NOI18N
-        jLabel2.setText("(不输入则默认返回全部数据)");
+        NoteLabel.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
+        NoteLabel.setForeground(new java.awt.Color(102, 102, 102));
+        NoteLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/提示.png"))); // NOI18N
+        NoteLabel.setText("(If no input, all data will be returned by default)");
 
-        SecondLabel.setFont(new java.awt.Font("微软雅黑", 0, 14)); // NOI18N
-        SecondLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/身份证正面.png"))); // NOI18N
-        SecondLabel.setText("选中的身份证ID：");
+        SelectNameLabel.setFont(new java.awt.Font("微软雅黑", 0, 14)); // NOI18N
+        SelectNameLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/身份证正面.png"))); // NOI18N
+        SelectNameLabel.setText("Selected ID:");
 
         DeleteTextField.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
         DeleteTextField.setForeground(new java.awt.Color(153, 153, 153));
@@ -159,22 +152,22 @@ public class PayingManageFrm extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel1)
+                                .addComponent(SearchNameLabel)
                                 .addGap(18, 18, 18)
                                 .addComponent(SearchTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(42, 42, 42)
                                 .addComponent(SearchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(27, 27, 27)
-                                .addComponent(jLabel2))
+                                .addComponent(NoteLabel))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(SecondLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(SelectNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(DeleteTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 281, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(40, 40, 40)
                                 .addComponent(DeleteButton)
                                 .addGap(18, 18, 18)
-                                .addComponent(jLabel4)))
-                        .addGap(0, 21, Short.MAX_VALUE)))
+                                .addComponent(DeleteNoteLabel)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -182,18 +175,18 @@ public class PayingManageFrm extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(SearchNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(SearchButton)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
+                    .addComponent(NoteLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
                     .addComponent(SearchTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(32, 32, 32)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(SecondLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(SelectNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(DeleteTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(DeleteButton)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(DeleteNoteLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(19, 19, 19))
         );
 
@@ -205,12 +198,13 @@ public class PayingManageFrm extends javax.swing.JFrame {
     }//GEN-LAST:event_SearchTextFieldActionPerformed
 
     private void SearchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SearchButtonActionPerformed
-        // TODO add your handling code here:
-        DefaultTableModel table = (DefaultTableModel) ListTable.getModel();
+        // Search Button :Create the data table and connect to the database
+        DefaultTableModel table = (DefaultTableModel) PayingInfoListTable.getModel();
         table.setRowCount(0);
         RentController rentDB = new RentController();
         RentInfo rentInfo = new RentInfo();
         rentInfo.setGuestName(SearchTextField.getText().toString());
+        //Add each column
         List<RentInfo> rentList = rentDB.getRentList(rentInfo);
         for (RentInfo rentInfoItem : rentList) {
             Vector v = new Vector();
@@ -221,27 +215,27 @@ public class PayingManageFrm extends javax.swing.JFrame {
             v.add(rentInfoItem.getRentDays());
             v.add("$ "+rentInfoItem.getAntecedentMoney());
 //            v.add(rentInfoItem.getRemark());
-            //添加一个计算消费的方法: 
+            //Add a method to calculate consumption by room type;
             int cost = 0;
-            if ("钟点房".equals(rentInfoItem.getRentType())) {
-                if ("单人间".equals(rentInfoItem.getRoomType())) {
+            if ("Hour Room".equals(rentInfoItem.getRentType())) {
+                if ("Single Room".equals(rentInfoItem.getRoomType())) {
                     cost = (60 * rentInfoItem.getRentDays())-rentInfoItem.getAntecedentMoney();
                 }
-                if ("双人间".equals(rentInfoItem.getRoomType())) {
+                if ("Double Room".equals(rentInfoItem.getRoomType())) {
                     cost = 90 * rentInfoItem.getRentDays();
                 }
-                if ("家庭间".equals(rentInfoItem.getRoomType())) {
+                if ("Family Room".equals(rentInfoItem.getRoomType())) {
                     cost = 120 * rentInfoItem.getRentDays();
                 }
             }
-            if ("标准房".equals(rentInfoItem.getRentType())) {
-                if ("单人间".equals(rentInfoItem.getRoomType())) {
+            if ("Standard Room".equals(rentInfoItem.getRentType())) {
+                if ("Single Room".equals(rentInfoItem.getRoomType())) {
                     cost = 100 * rentInfoItem.getRentDays();
                 }
-                if ("双人间".equals(rentInfoItem.getRoomType())) {
+                if ("Double Room".equals(rentInfoItem.getRoomType())) {
                     cost = 150 * rentInfoItem.getRentDays();
                 }
-                if ("家庭间".equals(rentInfoItem.getRoomType())) {
+                if ("Family Room".equals(rentInfoItem.getRoomType())) {
                     cost = 200 * rentInfoItem.getRentDays();
                 }
             }
@@ -249,38 +243,38 @@ public class PayingManageFrm extends javax.swing.JFrame {
             v.add("$ "+cost);
             table.addRow(v);
         }
+        //close rentDB;
         rentDB.closeBaseDB();
     }//GEN-LAST:event_SearchButtonActionPerformed
 
-    private void ListTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ListTableMouseClicked
+    private void PayingInfoListTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PayingInfoListTableMouseClicked
         // TODO add your handling code here:
         //对表格的select操作  ListTable
-        DefaultTableModel dft = (DefaultTableModel) ListTable.getModel();
-        DeleteTextField.setText(dft.getValueAt(ListTable.getSelectedRow(), 0).toString());
-    }//GEN-LAST:event_ListTableMouseClicked
+        DefaultTableModel dft = (DefaultTableModel) PayingInfoListTable.getModel();
+        DeleteTextField.setText(dft.getValueAt(PayingInfoListTable.getSelectedRow(), 0).toString());
+    }//GEN-LAST:event_PayingInfoListTableMouseClicked
 
     private void DeleteTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteTextFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_DeleteTextFieldActionPerformed
 
     private void DeleteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteButtonActionPerformed
-        // TODO add your handling code here:
-        //删除选中的数据库信息,并且把信息导入到rent表里面
-        if (JOptionPane.showConfirmDialog(this, "您确定删除么？") != JOptionPane.OK_OPTION) {
+        //Delete the selected database information and import it into the rent table
+        if (JOptionPane.showConfirmDialog(this, "Are you sure to delete it?") != JOptionPane.OK_OPTION) {
             return;
         }
-        int index = ListTable.getSelectedRow();
+        int index = PayingInfoListTable.getSelectedRow();
         if (index == -1) {
-            JOptionPane.showMessageDialog(this, "请从表中选中要删除的一条数据!");
+            JOptionPane.showMessageDialog(this, "Select the data to delete from the table!");
             return;
         }
-        DefaultTableModel dft = (DefaultTableModel) ListTable.getModel();
-        String SelectedId = dft.getValueAt(ListTable.getSelectedRow(), 0).toString();
+        DefaultTableModel dft = (DefaultTableModel) PayingInfoListTable.getModel();
+        String SelectedId = dft.getValueAt(PayingInfoListTable.getSelectedRow(), 0).toString();
         RentController rentDB = new RentController();
         if (rentDB.delete(SelectedId)) {
-            JOptionPane.showMessageDialog(this, "删除成功!");
+            JOptionPane.showMessageDialog(this, "successfully delete!");
         } else {
-            JOptionPane.showMessageDialog(this, "删除失败!");
+            JOptionPane.showMessageDialog(this, "fail to delete!");
         }
         rentDB.closeBaseDB();
         //        setTable(new RentInfo());
@@ -304,34 +298,37 @@ public class PayingManageFrm extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(PayingManageFrm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PayingInfoList.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(PayingManageFrm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PayingInfoList.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(PayingManageFrm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PayingInfoList.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(PayingManageFrm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PayingInfoList.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new PayingManageFrm().setVisible(true);
+                new PayingInfoList().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton DeleteButton;
+    private javax.swing.JLabel DeleteNoteLabel;
     private javax.swing.JTextField DeleteTextField;
-    private javax.swing.JTable ListTable;
+    private javax.swing.JLabel NoteLabel;
+    private javax.swing.JTable PayingInfoListTable;
     private javax.swing.JButton SearchButton;
+    private javax.swing.JLabel SearchNameLabel;
     private javax.swing.JTextField SearchTextField;
-    private javax.swing.JLabel SecondLabel;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel SelectNameLabel;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }

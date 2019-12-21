@@ -1,13 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package controller;
 
 /**
  *
- * @author hasee
+ * Reserve information and database synchronization ;
  */
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -17,13 +13,11 @@ import java.util.List;
 import model.ReserveInfo;
 import util.StringUtil;
 
-/**
- *
- * @author GP62MVR
- */
-public class ReserveController extends DatabaseController {
 
+public class ReserveController extends DatabaseController {
+    
     public boolean addRent(ReserveInfo reserveInfo) {
+        //Insert data into the database table RESERVEINFO;
         String sql = "insert into RESERVEINFO VALUES(?,?,?,?,?,?,?)";
         try {
             PreparedStatement preparedStatement = conn.prepareStatement(sql);
@@ -45,6 +39,8 @@ public class ReserveController extends DatabaseController {
     }
 
     public List<ReserveInfo> getRentList(ReserveInfo reserveInfo) {
+        //Synchronize the request information from the database and import it into the ReserveInfo List;
+        //Search function can achieve search and input information similar to the user name;
         List<ReserveInfo> resultList = new ArrayList<ReserveInfo>();
         String sqlString = "select * from RESERVEINFO";
         if (!StringUtil.isEmpty(reserveInfo.getGuestName())) {
@@ -73,6 +69,7 @@ public class ReserveController extends DatabaseController {
     }
 
     public boolean getReserveResult(ReserveInfo reserveInfo) {
+        //Determine the service request result and output True or False;
         String sqlString = "select * from RESERVEINFO";
         if (!StringUtil.isEmpty(reserveInfo.getGuestIDnumber())) {
             sqlString += " where GUESTIDNUMBER = \'" + reserveInfo.getGuestIDnumber() + "\'";
@@ -95,6 +92,7 @@ public class ReserveController extends DatabaseController {
     }
 
     public boolean delete(String guestIDnumber) {
+        //Delete by GUESTIDNUMBER from the information table;
         String sql = "delete from RESERVEINFO where GUESTIDNUMBER=?";
         try {
             PreparedStatement preparedStatement = conn.prepareStatement(sql);

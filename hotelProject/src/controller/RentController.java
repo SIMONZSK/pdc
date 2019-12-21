@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package controller;
 
 import java.util.List;
@@ -13,15 +9,12 @@ import java.util.ArrayList;
 import model.RentInfo;
 import util.StringUtil;
 
-/**
- * 租房信息和数据库的同步 private String guestIDnumber; private String guestName; private
- * String rentType; private String roomType; private int RentDays; private int
- * antecedentMoney; private String remark;
- *
- * @author hasee
- */
-public class RentController extends DatabaseController {
+    /**
+     * Rental information and database synchronization ;private String guestIDnumber; private String guestName; private
 
+     */
+public class RentController extends DatabaseController {
+    //Add the data column to the RENTINFO data table to create the production table;
     public boolean addRent(RentInfo rentInfo) {
         String sql = "insert into RENTINFO VALUES(?,?,?,?,?,?,?)";
         try {
@@ -44,6 +37,7 @@ public class RentController extends DatabaseController {
     }
 
     public List<RentInfo> getRentList(RentInfo rentInfo) {
+        //Get rental information from the database;
         List<RentInfo> resultList = new ArrayList<RentInfo>();
         String sqlString = "select * from RENTINFO";
         if (!StringUtil.isEmpty(rentInfo.getGuestName())) {
@@ -71,6 +65,7 @@ public class RentController extends DatabaseController {
     }
 
     public boolean delete(String guestIDnumber) {
+        //Delete the rental information of the customer;
         String sql = "delete from RENTINFO where GUESTIDNUMBER=?";
         try {
             PreparedStatement preparedStatement = conn.prepareStatement(sql);
@@ -79,7 +74,6 @@ public class RentController extends DatabaseController {
                 return true;
             }
         } catch (SQLException ex) {
-            // TODO Auto-generated catch block
             ex.printStackTrace();
         }
         return false;

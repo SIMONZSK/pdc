@@ -8,7 +8,6 @@ package view;
 import controller.UserController;
 import javax.swing.JOptionPane;
 import model.UserInfo;
-import model.UserType;
 import util.StringUtil;
 
 /**
@@ -223,7 +222,7 @@ public class FrameLogin extends javax.swing.JFrame {
             }
 
         } else if ("Manager".equals(selectedItem)) {
-            UserController userDB = new UserController();//获取查询到的实例
+            UserController userDB = new UserController();
             UserInfo userInfoTmp = new UserInfo();
             userInfoTmp.setUserName(userName);
             userInfoTmp.setPassword(password);
@@ -244,7 +243,7 @@ public class FrameLogin extends javax.swing.JFrame {
     }//GEN-LAST:event_LoginButtonActionPerformed
 
     private void RsetButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RsetButtonActionPerformed
-        // ResetButton:to clear up the JTextField's information and rewrite it.
+        // ResetButton:to clear up the TextField's information and rewrite it.
         userNameTextField.setText("");
         passwordTextField.setText("");
         userTypeComboBox.setSelectedIndex(0);

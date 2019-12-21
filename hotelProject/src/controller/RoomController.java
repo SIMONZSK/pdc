@@ -16,11 +16,12 @@ import util.StringUtil;
 
 /**
  *
- * @author hasee
+ * Room information and database synchronization ;
  */
 public class RoomController extends DatabaseController {
 
     public boolean addRoom(RoomInfo roomInfo) {
+        //Insert data into the database table ROOMINFO;
         String sql = "insert into ROOMINFO VALUES(?,?,?)";
         try {
             PreparedStatement preparedStatement = conn.prepareStatement(sql);
@@ -37,6 +38,8 @@ public class RoomController extends DatabaseController {
     }
 
     public List<RoomInfo> getRoomList(RoomInfo roomInfo) {
+        //Synchronize the room information from the database and import it into the RoomInfo List;
+        //Search function can achieve search and input information similar to the roomname;
         List<RoomInfo> resultList = new ArrayList<RoomInfo>();
         String sqlString = "select * from ROOMINFO";
         if (!StringUtil.isEmpty(roomInfo.getRoomName())) {
@@ -59,6 +62,7 @@ public class RoomController extends DatabaseController {
     }
 
     public int getRoomNumber(RoomInfo roomInfo) {
+        //To determine whether a certain type of room is available, for users to inquire booking room;
         int num = 0;
         String sqlString="select * from ROOMINFO where ROOMCONDITION=true AND ROOMTYPE='"+roomInfo.getRoomType()+"'";
 

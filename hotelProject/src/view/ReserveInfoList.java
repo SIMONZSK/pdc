@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package view;
 
 import controller.RentController;
@@ -14,10 +10,6 @@ import javax.swing.table.DefaultTableModel;
 import model.RentInfo;
 import model.ReserveInfo;
 
-/**
- *
- * @author hasee
- */
 public class ReserveInfoList extends javax.swing.JFrame {
 
     /**
@@ -45,11 +37,12 @@ public class ReserveInfoList extends javax.swing.JFrame {
         CheckButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Processing service request information");
         setLocation(new java.awt.Point(480, 280));
 
         SecondLabel.setFont(new java.awt.Font("微软雅黑", 0, 14)); // NOI18N
         SecondLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/身份证正面.png"))); // NOI18N
-        SecondLabel.setText("选中的预订者ID：");
+        SecondLabel.setText("Selected subscriber ID :");
 
         DeleteTextField.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
         DeleteTextField.setForeground(new java.awt.Color(153, 153, 153));
@@ -141,8 +134,8 @@ public class ReserveInfoList extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(SecondLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(SecondLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(DeleteTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(32, 32, 32)
                         .addComponent(CheckButton, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -150,7 +143,7 @@ public class ReserveInfoList extends javax.swing.JFrame {
                         .addComponent(AcceptButton, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(RefuseButton, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 21, Short.MAX_VALUE)))
+                        .addGap(0, 2, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -172,13 +165,13 @@ public class ReserveInfoList extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void AcceptButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AcceptButtonActionPerformed
-        // TODO add your handling code here:
-        if (JOptionPane.showConfirmDialog(this, "您确定接受用户预订吗？") != JOptionPane.OK_OPTION) {
+        // AcceptButton :Add reservation information;
+        if (JOptionPane.showConfirmDialog(this, "Are you sure you want to take a reservation?") != JOptionPane.OK_OPTION) {
             return;
         }
         int index = ListTable.getSelectedRow();
         if (index == -1) {
-            JOptionPane.showMessageDialog(this, "请从表中选中要处理的的一条预订数据!");
+            JOptionPane.showMessageDialog(this, "Please select a reservation data to be processed from the table!");
             return;
         }
         DefaultTableModel dft = (DefaultTableModel) ListTable.getModel();
@@ -212,28 +205,28 @@ public class ReserveInfoList extends javax.swing.JFrame {
             rentInfo.setRemark(SelectedRemark);
             RentController rentDB = new RentController();
             if (rentDB.addRent(rentInfo)) {
-                System.out.println("成功将预订请求添加到住房表信息添加成功");
+                System.out.println("Add reservation request to table successfully add reservation request to table successfully");
             }
             rentDB.closeBaseDB();
 
-            JOptionPane.showMessageDialog(this, "成功接受预订!");
+            JOptionPane.showMessageDialog(this, "Reservations accepted!");
         } else {
-            JOptionPane.showMessageDialog(this, "接受预订失败!");
+            JOptionPane.showMessageDialog(this, "Failure to accept reservation!");
         }
         reserveDB.closeBaseDB();
-        //        setTable(new RentInfo());
+        //setTable(new RentInfo());
         checkAll();
     }//GEN-LAST:event_AcceptButtonActionPerformed
 
     private void RefuseButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RefuseButtonActionPerformed
-        // TODO add your handling code here:
-        //删除选中的数据库信息
-        if (JOptionPane.showConfirmDialog(this, "您确定拒绝该用户预订吗？") != JOptionPane.OK_OPTION) {
+
+        //Delete selected database information;
+        if (JOptionPane.showConfirmDialog(this, "Are you sure you want to refuse the reservation?") != JOptionPane.OK_OPTION) {
             return;
         }
         int index = ListTable.getSelectedRow();
         if (index == -1) {
-            JOptionPane.showMessageDialog(this, "请从表中选中要处理的的一条预订数据!");
+            JOptionPane.showMessageDialog(this, "Please select a reservation data to be processed from the table!");
             return;
         }
         DefaultTableModel dft = (DefaultTableModel) ListTable.getModel();
@@ -241,27 +234,27 @@ public class ReserveInfoList extends javax.swing.JFrame {
         ReserveController reserveDB = new ReserveController();
         if (reserveDB.delete(SelectedId)) {
 
-            JOptionPane.showMessageDialog(this, "成功拒绝预订!");
+            JOptionPane.showMessageDialog(this, "Reservation rejected!");
         } else {
-            JOptionPane.showMessageDialog(this, "拒绝预订失败!");
+            JOptionPane.showMessageDialog(this, "Reservation refusal failed!");
         }
         reserveDB.closeBaseDB();
         checkAll();
     }//GEN-LAST:event_RefuseButtonActionPerformed
 
     private void ListTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ListTableMouseClicked
-        // TODO add your handling code here:
-        //对表格的select操作  ListTable
+
+        //Select on the ListTable
         DefaultTableModel dft = (DefaultTableModel) ListTable.getModel();
         DeleteTextField.setText(dft.getValueAt(ListTable.getSelectedRow(), 0).toString());
     }//GEN-LAST:event_ListTableMouseClicked
 
     private void DeleteTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteTextFieldActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_DeleteTextFieldActionPerformed
 
     private void CheckButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CheckButtonActionPerformed
-        // TODO add your handling code here: 查询预订表的信息
+        //Query the reservation table for information;
         checkAll();
     }//GEN-LAST:event_CheckButtonActionPerformed
 

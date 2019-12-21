@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package controller;
 
 import java.sql.PreparedStatement;
@@ -15,11 +10,12 @@ import model.RequestInfo;
 import util.StringUtil;
 
 /**
+ * Request information and database synchronization ;
  *
- * @author GP62MVR
  */
 public class RequestController extends DatabaseController {
 
+    //Insert data into the database table REQUESTINFO;
     public boolean addRequest(RequestInfo requestInfo) {
         String sql = "insert into REQUESTINFO VALUES(?,?,?)";
         try {
@@ -36,12 +32,13 @@ public class RequestController extends DatabaseController {
         return false;
     }
 
-        public List<RequestInfo> getRequestList(RequestInfo requestInfo){
-            List<RequestInfo>resultList = new ArrayList<RequestInfo>();
-            String sqlString = "select * from REQUESTINFO";
-            if (!StringUtil.isEmpty(requestInfo.getName())) {
-			sqlString = " select * from REQUESTINFO where NAME= '"+requestInfo.getName()+"'";
-                        
+    public List<RequestInfo> getRequestList(RequestInfo requestInfo) {
+       //Synchronize the request information from the database and import it into the List;
+        List<RequestInfo> resultList = new ArrayList<RequestInfo>();
+        String sqlString = "select * from REQUESTINFO";
+        if (!StringUtil.isEmpty(requestInfo.getName())) {
+            sqlString = " select * from REQUESTINFO where NAME= '" + requestInfo.getName() + "'";
+
         }
         try {
             PreparedStatement preparedStatement = conn.prepareStatement(sqlString);
@@ -58,26 +55,20 @@ public class RequestController extends DatabaseController {
         }
         return resultList;
     }
-        
-        
-        
-        public boolean delete(String name) {
+
+    public boolean delete(String name) {
+        //Delete by NAME from the information table;
         String sql = "delete from REQUESTINFO where NAME=?";
         try {
             PreparedStatement preparedStatement = conn.prepareStatement(sql);
-            preparedStatement.setString(2, name);
+            preparedStatement.setString(1, name);
             if (preparedStatement.executeUpdate() > 0) {
                 return true;
             }
         } catch (SQLException ex) {
             // TODO Auto-generated catch block
-            ex.printStackTrace();
         }
         return false;
     }
 
-        
-        
-        
-        
 }

@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package view;
 
 import controller.RequestController;
@@ -10,10 +6,7 @@ import javax.swing.JOptionPane;
 import model.RequestInfo;
 import util.StringUtil;
 
-/**
- *
- * @author GP62MVR
- */
+
 public class RequestInfoAdd extends javax.swing.JFrame {
 
     /**
@@ -32,53 +25,53 @@ public class RequestInfoAdd extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        IdTextField = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
+        IDCardLabel = new javax.swing.JLabel();
+        IDTextField = new javax.swing.JTextField();
+        NameLabel = new javax.swing.JLabel();
         RequestTextField = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
+        ServiceAppLabel = new javax.swing.JLabel();
         NameTextField = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        SubmitButton = new javax.swing.JButton();
+        ResetInfoButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("请求服务");
+        setTitle("Request service");
         setLocation(new java.awt.Point(480, 280));
 
-        jLabel1.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/身份证正面.png"))); // NOI18N
-        jLabel1.setText("身份证号码：");
+        IDCardLabel.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
+        IDCardLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/身份证正面.png"))); // NOI18N
+        IDCardLabel.setText("ID Card :");
 
-        IdTextField.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
-        IdTextField.addActionListener(new java.awt.event.ActionListener() {
+        IDTextField.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
+        IDTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                IdTextFieldActionPerformed(evt);
+                IDTextFieldActionPerformed(evt);
             }
         });
 
-        jLabel2.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/姓名，证件.png"))); // NOI18N
-        jLabel2.setText("姓名：");
+        NameLabel.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
+        NameLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/姓名，证件.png"))); // NOI18N
+        NameLabel.setText("Name :");
 
         RequestTextField.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
 
-        jLabel4.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/房间.png"))); // NOI18N
-        jLabel4.setText("服务申请");
+        ServiceAppLabel.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
+        ServiceAppLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/房间.png"))); // NOI18N
+        ServiceAppLabel.setText("Service Application");
 
         NameTextField.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
 
-        jButton1.setText("提交");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        SubmitButton.setText("Submit");
+        SubmitButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                SubmitButtonActionPerformed(evt);
             }
         });
 
-        jButton2.setText("重置信息");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        ResetInfoButton.setText("Reset Info");
+        ResetInfoButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                ResetInfoButtonActionPerformed(evt);
             }
         });
 
@@ -87,26 +80,26 @@ public class RequestInfoAdd extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(87, Short.MAX_VALUE)
+                .addContainerGap(53, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(SubmitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(ResetInfoButton))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(ServiceAppLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGap(37, 37, 37)
                         .addComponent(RequestTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(IDCardLabel)
+                            .addComponent(NameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(36, 36, 36)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(IdTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(IDTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(1, 1, 1))
-                            .addComponent(NameTextField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(NameTextField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(62, 62, 62))
         );
         layout.setVerticalGroup(
@@ -115,45 +108,46 @@ public class RequestInfoAdd extends javax.swing.JFrame {
                 .addGap(39, 39, 39)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(RequestTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(ServiceAppLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(31, 31, 31)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(IdTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(IDCardLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(IDTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(34, 34, 34)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(NameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(NameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(SubmitButton)
+                    .addComponent(ResetInfoButton))
                 .addGap(54, 54, 54))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void IdTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IdTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_IdTextFieldActionPerformed
+    private void IDTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IDTextFieldActionPerformed
+    
+    }//GEN-LAST:event_IDTextFieldActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void SubmitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SubmitButtonActionPerformed
+        //SubmitButton :Create service request;
         String Request = RequestTextField.getText().toString();
         String Name = NameTextField.getText().toString();
-        String Id = IdTextField.getText().toString();
+        String Id = IDTextField.getText().toString();
         
 
         if (StringUtil.isEmpty(Request)) {
-            JOptionPane.showMessageDialog(this, "请求不能为空！");
+            JOptionPane.showMessageDialog(this, "The request cannot be empty!");
             return;
         }
         if (StringUtil.isEmpty(Name)) {
-            JOptionPane.showMessageDialog(this, "姓名不能为空！");
+            JOptionPane.showMessageDialog(this, "Name cannot be empty!");
             return;
         }
         if (StringUtil.isEmpty(Id)) {
-            JOptionPane.showMessageDialog(this, "身份证号不能为空！");
+            JOptionPane.showMessageDialog(this, "ID number cannot be empty!");
             return;
         }
         
@@ -166,25 +160,26 @@ public class RequestInfoAdd extends javax.swing.JFrame {
 
         RequestController requestDB = new RequestController();
         if (requestDB.addRequest(requestInfo)) {
-            JOptionPane.showMessageDialog(this, "服务申请信息添加成功！");
-            System.out.println("服务申请信息添加成功");
+            JOptionPane.showMessageDialog(this, "Service application information added successfully!");
+            System.out.println("Service application information added successfully!");
         } else {
-            JOptionPane.showMessageDialog(this, "服务申请信息添加失败！");
+            JOptionPane.showMessageDialog(this, "Service application information added failed!");
         }
         requestDB.closeBaseDB();
         this.setVisible(true);
 
         RequestTextField.setText("");
-        IdTextField.setText("");
+        IDTextField.setText("");
         NameTextField.setText("");
 
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_SubmitButtonActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void ResetInfoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ResetInfoButtonActionPerformed
+        // ResetButton:to clear up the TextField's information and rewrite it.
         RequestTextField.setText("");
-        IdTextField.setText("");
+        IDTextField.setText("");
         NameTextField.setText("");        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_ResetInfoButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -225,13 +220,13 @@ public class RequestInfoAdd extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField IdTextField;
+    private javax.swing.JLabel IDCardLabel;
+    private javax.swing.JTextField IDTextField;
+    private javax.swing.JLabel NameLabel;
     private javax.swing.JTextField NameTextField;
     private javax.swing.JTextField RequestTextField;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JButton ResetInfoButton;
+    private javax.swing.JLabel ServiceAppLabel;
+    private javax.swing.JButton SubmitButton;
     // End of variables declaration//GEN-END:variables
 }
