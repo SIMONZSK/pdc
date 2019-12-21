@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package view;
 
 import controller.ReserveController;
@@ -11,10 +7,6 @@ import javax.swing.JOptionPane;
 import model.ReserveInfo;
 import util.StringUtil;
 
-/**
- *
- * @author hasee
- */
 public class ReserveInfoCheck extends javax.swing.JFrame {
 
     /**
@@ -34,7 +26,7 @@ public class ReserveInfoCheck extends javax.swing.JFrame {
     private void initComponents() {
 
         CheckButton = new javax.swing.JButton();
-        SecondLabel = new javax.swing.JLabel();
+        IDNumberLabel = new javax.swing.JLabel();
         SearchIDTextField = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -50,9 +42,9 @@ public class ReserveInfoCheck extends javax.swing.JFrame {
             }
         });
 
-        SecondLabel.setFont(new java.awt.Font("微软雅黑", 0, 14)); // NOI18N
-        SecondLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/022-users-1.png"))); // NOI18N
-        SecondLabel.setText("Input your ID number：");
+        IDNumberLabel.setFont(new java.awt.Font("微软雅黑", 0, 14)); // NOI18N
+        IDNumberLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/022-users-1.png"))); // NOI18N
+        IDNumberLabel.setText("Input your ID number：");
 
         SearchIDTextField.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
         SearchIDTextField.setForeground(new java.awt.Color(153, 153, 153));
@@ -77,14 +69,14 @@ public class ReserveInfoCheck extends javax.swing.JFrame {
                         .addComponent(CheckButton, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(73, 73, 73)
-                        .addComponent(SecondLabel)))
+                        .addComponent(IDNumberLabel)))
                 .addContainerGap(53, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(33, 33, 33)
-                .addComponent(SecondLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(IDNumberLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(SearchIDTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(32, 32, 32)
@@ -96,25 +88,25 @@ public class ReserveInfoCheck extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void CheckButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CheckButtonActionPerformed
-        // TODO add your handling code here: 查询预订表的信息
+        //CheckButton : Query the reservation table for information
         ReserveController reserveDB = new ReserveController();
         ReserveInfo reserveInfo = new ReserveInfo();
         String ID =SearchIDTextField.getText();
         if(StringUtil.isEmpty(ID)){
-            JOptionPane.showMessageDialog(this, "ID不能为空！");
+            JOptionPane.showMessageDialog(this, "ID cannot be empty!");
 		return;
             }
         reserveInfo.setGuestIDnumber(SearchIDTextField.getText());
         if(reserveDB.getReserveResult(reserveInfo)){
-            JOptionPane.showMessageDialog(this, "成功预订!");
-        }else JOptionPane.showMessageDialog(this, "预订被拒绝,或还未处理!");
+            JOptionPane.showMessageDialog(this, "Reservation successful!");
+        }else JOptionPane.showMessageDialog(this, "Reservation rejected, or not yet processed!");
         SearchIDTextField.setText("");
         
         reserveDB.closeBaseDB();
     }//GEN-LAST:event_CheckButtonActionPerformed
 
     private void SearchIDTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SearchIDTextFieldActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_SearchIDTextFieldActionPerformed
 
     /**
@@ -155,7 +147,7 @@ public class ReserveInfoCheck extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton CheckButton;
+    private javax.swing.JLabel IDNumberLabel;
     private javax.swing.JTextField SearchIDTextField;
-    private javax.swing.JLabel SecondLabel;
     // End of variables declaration//GEN-END:variables
 }

@@ -18,13 +18,13 @@ import model.UserInfo;
  */
 public class UserController extends DatabaseController {
     /**
-     * 登录连接数据库实现
+     * Log in to connect to the database implementation;
      */
     public boolean login(UserInfo userInfo){
         String sql = "select * from USERINFO where NAME=? AND PASSWORD=? AND USERTYPE=? ";
         UserInfo userResult = null;
         try {
-            PreparedStatement prst = conn.prepareStatement(sql);//把sql语句传给数据库操作对象
+            PreparedStatement prst = conn.prepareStatement(sql);//Pass SQL statements to the database action object
             prst.setString(1, userInfo.getUserName());
             prst.setString(2, userInfo.getPassword());
             prst.setBoolean(3, userInfo.getUserType());
@@ -47,16 +47,16 @@ public class UserController extends DatabaseController {
 
     }
     public boolean register(UserInfo userInfo){
-        //先确认数据库是否有这个人  name
+        //make sure the database has this person's name
 //        UserInfo userResult = null;
 //        userResult=this.login(userInfo);
 //        if(userInfo.getUserName().equals(userResult.getUserName())){
-//            System.out.println("数据库已经存在这个用户");
-//        }else System.out.println("数据库不存在这个用户");
+//            System.out.println("The database already exists for this user");
+//        }else System.out.println("The database does not exist for this user");
         
         String sql = "INSERT INTO USERINFO VALUES(?,?,?) ";    
         try {
-            PreparedStatement prst = conn.prepareStatement(sql);//把sql语句传给数据库操作对象
+            PreparedStatement prst = conn.prepareStatement(sql);//Pass SQL statements to the database action object
             prst.setString(1, userInfo.getUserName());
             prst.setString(2, userInfo.getPassword());
             prst.setBoolean(3, userInfo.getUserType());

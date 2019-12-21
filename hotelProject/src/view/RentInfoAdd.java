@@ -32,42 +32,42 @@ public class RentInfoAdd extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        RentalRoomLabel = new javax.swing.JLabel();
+        RoomTypeLabel = new javax.swing.JLabel();
+        HousingDayLabel = new javax.swing.JLabel();
         ResetButton = new javax.swing.JButton();
-        jLabel6 = new javax.swing.JLabel();
+        DepositLabel = new javax.swing.JLabel();
         RentTypeComboBox = new javax.swing.JComboBox<>();
         RoomTypeComboBox = new javax.swing.JComboBox<>();
-        jLabel7 = new javax.swing.JLabel();
+        RemarkLabel = new javax.swing.JLabel();
         SubmitButton = new javax.swing.JButton();
         NameTextField = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
+        IDNumberLabel = new javax.swing.JLabel();
         RentDaysTextField = new javax.swing.JTextField();
         IDTextField = new javax.swing.JTextField();
         MoneyTextField = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
+        NameLabel = new javax.swing.JLabel();
         RemarkTextField = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("添加新的住房信息");
+        setTitle("Add new housing information");
         setLocation(new java.awt.Point(480, 280));
 
-        jLabel3.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/预订房间保证.png"))); // NOI18N
-        jLabel3.setText("租房类型：");
+        RentalRoomLabel.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
+        RentalRoomLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/预订房间保证.png"))); // NOI18N
+        RentalRoomLabel.setText("Type Of Rental:");
 
-        jLabel4.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/房间.png"))); // NOI18N
-        jLabel4.setText("房间类型：");
+        RoomTypeLabel.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
+        RoomTypeLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/房间.png"))); // NOI18N
+        RoomTypeLabel.setText("RoomType :");
 
-        jLabel5.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/003-calendar.png"))); // NOI18N
-        jLabel5.setText("住房天数：");
+        HousingDayLabel.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
+        HousingDayLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/003-calendar.png"))); // NOI18N
+        HousingDayLabel.setText("Housing days:");
 
         ResetButton.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
         ResetButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/失败.png"))); // NOI18N
-        ResetButton.setText("重置信息");
+        ResetButton.setText("Reset Information");
         ResetButton.setToolTipText("");
         ResetButton.setActionCommand("");
         ResetButton.addActionListener(new java.awt.event.ActionListener() {
@@ -76,28 +76,34 @@ public class RentInfoAdd extends javax.swing.JFrame {
             }
         });
 
-        jLabel6.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/钱包1.png"))); // NOI18N
-        jLabel6.setText("押金：");
+        DepositLabel.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
+        DepositLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/钱包1.png"))); // NOI18N
+        DepositLabel.setText("Deposit :");
+        DepositLabel.setToolTipText("");
 
         RentTypeComboBox.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
-        RentTypeComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "钟点房", "标准房" }));
+        RentTypeComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Hour Room", "Standard Room" }));
+        RentTypeComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RentTypeComboBoxActionPerformed(evt);
+            }
+        });
 
         RoomTypeComboBox.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
-        RoomTypeComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "单人间", "双人间", "家庭间" }));
+        RoomTypeComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Single Room", "Double Room", "Family Room" }));
         RoomTypeComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 RoomTypeComboBoxActionPerformed(evt);
             }
         });
 
-        jLabel7.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/创作.png"))); // NOI18N
-        jLabel7.setText("备注：");
+        RemarkLabel.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
+        RemarkLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/创作.png"))); // NOI18N
+        RemarkLabel.setText("Remark :");
 
         SubmitButton.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
         SubmitButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/增加.png"))); // NOI18N
-        SubmitButton.setText("提交");
+        SubmitButton.setText("Submit");
         SubmitButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SubmitButtonActionPerformed(evt);
@@ -106,9 +112,9 @@ public class RentInfoAdd extends javax.swing.JFrame {
 
         NameTextField.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
 
-        jLabel1.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/身份证正面.png"))); // NOI18N
-        jLabel1.setText("身份证号码：");
+        IDNumberLabel.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
+        IDNumberLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/身份证正面.png"))); // NOI18N
+        IDNumberLabel.setText("ID Number:");
 
         RentDaysTextField.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
 
@@ -121,9 +127,9 @@ public class RentInfoAdd extends javax.swing.JFrame {
 
         MoneyTextField.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
 
-        jLabel2.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/姓名，证件.png"))); // NOI18N
-        jLabel2.setText("姓名：");
+        NameLabel.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
+        NameLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/姓名，证件.png"))); // NOI18N
+        NameLabel.setText("Name :");
 
         RemarkTextField.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
 
@@ -137,20 +143,20 @@ public class RentInfoAdd extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(SubmitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(ResetButton, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(ResetButton))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(IDNumberLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGap(36, 36, 36))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel5))
+                                    .addComponent(RentalRoomLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(RoomTypeLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(NameLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(DepositLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(HousingDayLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(RemarkLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(MoneyTextField, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -160,38 +166,38 @@ public class RentInfoAdd extends javax.swing.JFrame {
                             .addComponent(RentDaysTextField)
                             .addComponent(RentTypeComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(RoomTypeComboBox, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(75, Short.MAX_VALUE))
+                .addContainerGap(79, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(24, 24, 24)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(IDNumberLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(IDTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(NameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(NameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(RentalRoomLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(RentTypeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(19, 19, 19)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(RoomTypeLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(RoomTypeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(HousingDayLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(RentDaysTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(DepositLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(MoneyTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(RemarkLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(RemarkTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(35, 35, 35)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -225,30 +231,32 @@ public class RentInfoAdd extends javax.swing.JFrame {
 
     private void SubmitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SubmitButtonActionPerformed
         // TODO add your handling code here:
-        //提交按钮向数据库添加完数据以后就消失,
+        //The submit button disappears after adding data to the database;
         String ID=IDTextField.getText().toString();
         String Name=NameTextField.getText().toString();
-        String Rentdays=RentDaysTextField.getText().toString();  //不知道这里有没有问题，原本是Int
+        String Rentdays=RentDaysTextField.getText().toString();
         String Money=MoneyTextField.getText().toString();
         String Remark=RemarkTextField.getText();
         String selectedRentItem = (String)RentTypeComboBox.getSelectedItem();
         String selectedRoomItem = (String)RoomTypeComboBox.getSelectedItem();
+        //Information is required. If it is empty, it indicates that information needs to be added;
         if(StringUtil.isEmpty(ID)){
-            JOptionPane.showMessageDialog(this, "身份证ID不能为空！");
+            JOptionPane.showMessageDialog(this, "ID cannot be empty!");
 			return;
         }
         if(StringUtil.isEmpty(Name)){
-            JOptionPane.showMessageDialog(this, "身份证姓名不能为空！");
+            JOptionPane.showMessageDialog(this, "ID name cannot be empty!");
 			return;
         }
         if(StringUtil.isEmpty(Rentdays)){
-            JOptionPane.showMessageDialog(this, "预订天数不能为空！");
+            JOptionPane.showMessageDialog(this, "Booking days cannot be empty!");
 			return;
         }
         if(StringUtil.isEmpty(Money)){
-            JOptionPane.showMessageDialog(this, "押金不能为空！");
+            JOptionPane.showMessageDialog(this, "The deposit cannot be empty!");
 			return;
         }
+        //Add data column;
         RentInfo rentInfo =new RentInfo();
         rentInfo.setGuestIDnumber(ID);
         rentInfo.setGuestName(Name);
@@ -260,10 +268,10 @@ public class RentInfoAdd extends javax.swing.JFrame {
         
         RentController rentDB=new RentController();   
         if(rentDB.addRent(rentInfo)){
-            JOptionPane.showMessageDialog(this, "租房信息添加成功！");
-            System.out.println("租房信息添加成功");
+            JOptionPane.showMessageDialog(this, "Rental information added successfully!");
+            System.out.println("Rental information added successfully!");
 	}else{
-            JOptionPane.showMessageDialog(this, "租房信息添加失败！");
+            JOptionPane.showMessageDialog(this, "Rental information added failed!");
 	}
         rentDB.closeBaseDB();
         this.setVisible(true);
@@ -280,6 +288,10 @@ public class RentInfoAdd extends javax.swing.JFrame {
 //        this.dispose();
 //        MainFrm main=new MainFrm();
     }//GEN-LAST:event_SubmitButtonActionPerformed
+
+    private void RentTypeComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RentTypeComboBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_RentTypeComboBoxActionPerformed
 
     /**
      * @param args the command line arguments
@@ -318,21 +330,21 @@ public class RentInfoAdd extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel DepositLabel;
+    private javax.swing.JLabel HousingDayLabel;
+    private javax.swing.JLabel IDNumberLabel;
     private javax.swing.JTextField IDTextField;
     private javax.swing.JTextField MoneyTextField;
+    private javax.swing.JLabel NameLabel;
     private javax.swing.JTextField NameTextField;
+    private javax.swing.JLabel RemarkLabel;
     private javax.swing.JTextField RemarkTextField;
     private javax.swing.JTextField RentDaysTextField;
     private javax.swing.JComboBox<String> RentTypeComboBox;
+    private javax.swing.JLabel RentalRoomLabel;
     private javax.swing.JButton ResetButton;
     private javax.swing.JComboBox<String> RoomTypeComboBox;
+    private javax.swing.JLabel RoomTypeLabel;
     private javax.swing.JButton SubmitButton;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     // End of variables declaration//GEN-END:variables
 }

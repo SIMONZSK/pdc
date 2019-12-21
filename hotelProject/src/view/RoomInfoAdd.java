@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package view;
 
 import controller.RoomController;
@@ -11,10 +7,7 @@ import model.RentInfo;
 import model.RoomInfo;
 import util.StringUtil;
 
-/**
- *
- * @author hasee
- */
+
 public class RoomInfoAdd extends javax.swing.JFrame {
 
     /**
@@ -34,21 +27,21 @@ public class RoomInfoAdd extends javax.swing.JFrame {
     private void initComponents() {
 
         ResetButton = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
+        RoomNumberLabel = new javax.swing.JLabel();
         RentTypeComboBox = new javax.swing.JComboBox<>();
         RoomTypeComboBox = new javax.swing.JComboBox<>();
         SubmitButton = new javax.swing.JButton();
         NameTextField = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        RoomStatusLabel = new javax.swing.JLabel();
+        RoomTypeLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("添加房间信息");
+        setTitle("Add room information");
         setLocation(new java.awt.Point(480, 280));
 
         ResetButton.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
         ResetButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/失败.png"))); // NOI18N
-        ResetButton.setText("重置信息");
+        ResetButton.setText("Reset Info");
         ResetButton.setToolTipText("");
         ResetButton.setActionCommand("");
         ResetButton.addActionListener(new java.awt.event.ActionListener() {
@@ -57,15 +50,15 @@ public class RoomInfoAdd extends javax.swing.JFrame {
             }
         });
 
-        jLabel2.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/房间.png"))); // NOI18N
-        jLabel2.setText("房间号：");
+        RoomNumberLabel.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
+        RoomNumberLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/房间.png"))); // NOI18N
+        RoomNumberLabel.setText("Room number :");
 
         RentTypeComboBox.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
-        RentTypeComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "空闲", "不空闲" }));
+        RentTypeComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "available", "unavailable" }));
 
         RoomTypeComboBox.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
-        RoomTypeComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "单人间", "双人间", "家庭间" }));
+        RoomTypeComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Single Room", "Double Room", "Family Room" }));
         RoomTypeComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 RoomTypeComboBoxActionPerformed(evt);
@@ -74,7 +67,7 @@ public class RoomInfoAdd extends javax.swing.JFrame {
 
         SubmitButton.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
         SubmitButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/增加.png"))); // NOI18N
-        SubmitButton.setText("提交");
+        SubmitButton.setText("Submit");
         SubmitButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SubmitButtonActionPerformed(evt);
@@ -83,13 +76,13 @@ public class RoomInfoAdd extends javax.swing.JFrame {
 
         NameTextField.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
 
-        jLabel3.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/预订房间保证.png"))); // NOI18N
-        jLabel3.setText("房间状态：");
+        RoomStatusLabel.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
+        RoomStatusLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/预订房间保证.png"))); // NOI18N
+        RoomStatusLabel.setText("Room status :");
 
-        jLabel4.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/房间.png"))); // NOI18N
-        jLabel4.setText("房间类型：");
+        RoomTypeLabel.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
+        RoomTypeLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/房间.png"))); // NOI18N
+        RoomTypeLabel.setText("Room Type :");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -98,40 +91,38 @@ public class RoomInfoAdd extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(59, 59, 59)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(SubmitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(ResetButton, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE)
-                                .addGap(52, 52, 52)
-                                .addComponent(NameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(jLabel4)
-                            .addGap(52, 52, 52)
-                            .addComponent(RoomTypeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(SubmitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(ResetButton))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(RoomNumberLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(52, 52, 52)
+                        .addComponent(NameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(RoomTypeLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(RoomTypeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(RoomStatusLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(RentTypeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(62, Short.MAX_VALUE))
+                .addContainerGap(31, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(39, 39, 39)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(RoomNumberLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(NameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(27, 27, 27)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(RoomTypeLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(RoomTypeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(RoomStatusLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(RentTypeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(29, 29, 29)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -144,41 +135,41 @@ public class RoomInfoAdd extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void ResetButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ResetButtonActionPerformed
-        // TODO add your handling code here:
+        //ResetButton : Clear all information and write again;
         NameTextField.setText("");
         RentTypeComboBox.setSelectedIndex(0);
         RoomTypeComboBox.setSelectedIndex(0);
     }//GEN-LAST:event_ResetButtonActionPerformed
 
     private void RoomTypeComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RoomTypeComboBoxActionPerformed
-        // TODO add your handling code here:
+       
     }//GEN-LAST:event_RoomTypeComboBoxActionPerformed
 
     private void SubmitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SubmitButtonActionPerformed
-        // TODO add your handling code here:
-        //提交按钮向数据库添加完数据以后就消失,
+
+       // the submit button disappears after adding data to the database;
         String Name = NameTextField.getText().toString();
         String selectedRoomItem = (String) RoomTypeComboBox.getSelectedItem();
         String selectedRentItem = (String) RentTypeComboBox.getSelectedItem();
         if (StringUtil.isEmpty(Name)) {
-            JOptionPane.showMessageDialog(this, "房间号不能为空！");
+            JOptionPane.showMessageDialog(this, "The room number cannot be empty!");
             return;
         }
         RoomInfo roomInfo = new RoomInfo();
         roomInfo.setRoomName(Name);
         roomInfo.setRoomType(selectedRoomItem);
-        if ("空闲".equals(selectedRentItem)) {
+        if ("available".equals(selectedRentItem)) {
             roomInfo.setRoomCondition(true);
         }
-        if ("不空闲".equals(selectedRentItem)) {
+        if ("unavailable".equals(selectedRentItem)) {
             roomInfo.setRoomCondition(false);
         }
         RoomController roomDB = new RoomController();
         if (roomDB.addRoom(roomInfo)) {
-            JOptionPane.showMessageDialog(this, "房间信息添加成功！");
-            System.out.println("房间信息添加成功");
+            JOptionPane.showMessageDialog(this, "Room information added successfully!");
+            System.out.println("Room information added successfully");
         } else {
-            JOptionPane.showMessageDialog(this, "房间信息添加失败,不能重复添加！");
+            JOptionPane.showMessageDialog(this, "Failed to add room information, cannot add again!");
         }
         roomDB.closeBaseDB();
         this.setVisible(true);
@@ -232,10 +223,10 @@ public class RoomInfoAdd extends javax.swing.JFrame {
     private javax.swing.JTextField NameTextField;
     private javax.swing.JComboBox<String> RentTypeComboBox;
     private javax.swing.JButton ResetButton;
+    private javax.swing.JLabel RoomNumberLabel;
+    private javax.swing.JLabel RoomStatusLabel;
     private javax.swing.JComboBox<String> RoomTypeComboBox;
+    private javax.swing.JLabel RoomTypeLabel;
     private javax.swing.JButton SubmitButton;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     // End of variables declaration//GEN-END:variables
 }

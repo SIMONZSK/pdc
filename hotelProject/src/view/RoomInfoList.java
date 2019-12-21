@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package view;
 
 import controller.RoomController;
@@ -11,10 +7,6 @@ import java.util.Vector;
 import javax.swing.table.DefaultTableModel;
 import model.RoomInfo;
 
-/**
- *
- * @author hasee
- */
 public class RoomInfoList extends javax.swing.JFrame {
 
     /**
@@ -33,20 +25,20 @@ public class RoomInfoList extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        RoomInfoLabel = new javax.swing.JLabel();
         SearchTextField = new javax.swing.JTextField();
         SearchButton = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         ListTable = new javax.swing.JTable();
-        jLabel2 = new javax.swing.JLabel();
+        RoomSearchNoteLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("房间查询");
+        setTitle("Room query");
         setLocation(new java.awt.Point(480, 280));
 
-        jLabel1.setFont(new java.awt.Font("微软雅黑", 0, 14)); // NOI18N
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/身份证正面.png"))); // NOI18N
-        jLabel1.setText("请输入房间号：");
+        RoomInfoLabel.setFont(new java.awt.Font("微软雅黑", 0, 14)); // NOI18N
+        RoomInfoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/身份证正面.png"))); // NOI18N
+        RoomInfoLabel.setText("Please Enter Your Room Number:");
 
         SearchTextField.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
         SearchTextField.setForeground(new java.awt.Color(153, 153, 153));
@@ -111,10 +103,10 @@ public class RoomInfoList extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(ListTable);
 
-        jLabel2.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/提示.png"))); // NOI18N
-        jLabel2.setText("(不输入则默认返回全部数据)");
+        RoomSearchNoteLabel.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
+        RoomSearchNoteLabel.setForeground(new java.awt.Color(102, 102, 102));
+        RoomSearchNoteLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/提示.png"))); // NOI18N
+        RoomSearchNoteLabel.setText("No input will return all data by default  :");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -122,17 +114,17 @@ public class RoomInfoList extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addComponent(SearchTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(39, 39, 39)
-                .addComponent(SearchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26)
-                .addComponent(jLabel2)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 706, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(RoomInfoLabel)
+                        .addGap(18, 18, 18)
+                        .addComponent(SearchTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(39, 39, 39)
+                        .addComponent(SearchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(26, 26, 26)
+                        .addComponent(RoomSearchNoteLabel)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -140,9 +132,9 @@ public class RoomInfoList extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(RoomInfoLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(SearchButton)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
+                    .addComponent(RoomSearchNoteLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE)
                     .addComponent(SearchTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -153,11 +145,11 @@ public class RoomInfoList extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void SearchTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SearchTextFieldActionPerformed
-        // TODO add your handling code here:
+     
     }//GEN-LAST:event_SearchTextFieldActionPerformed
 
     private void SearchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SearchButtonActionPerformed
-        // TODO add your handling code here:
+        //SearchButton : Query all room information and export from the database to the table;
         DefaultTableModel table = (DefaultTableModel) ListTable.getModel();
         table.setRowCount(0);
         RoomController roomDB = new RoomController();
@@ -175,8 +167,8 @@ public class RoomInfoList extends javax.swing.JFrame {
     }//GEN-LAST:event_SearchButtonActionPerformed
 
     private void ListTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ListTableMouseClicked
-        // TODO add your handling code here:
-        //对表格的select操作  ListTable
+
+        //Select on the ListTable
         DefaultTableModel dft = (DefaultTableModel) ListTable.getModel();
     }//GEN-LAST:event_ListTableMouseClicked
 
@@ -218,10 +210,10 @@ public class RoomInfoList extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTable ListTable;
+    private javax.swing.JLabel RoomInfoLabel;
+    private javax.swing.JLabel RoomSearchNoteLabel;
     private javax.swing.JButton SearchButton;
     private javax.swing.JTextField SearchTextField;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }

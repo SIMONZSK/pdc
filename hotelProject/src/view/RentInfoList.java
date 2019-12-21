@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package view;
 
 import controller.RentController;
@@ -12,10 +8,7 @@ import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import model.RentInfo;
 
-/**
- *
- * @author hasee
- */
+
 public class RentInfoList extends javax.swing.JFrame {
 
     /**
@@ -34,24 +27,24 @@ public class RentInfoList extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        IDNameLabel = new javax.swing.JLabel();
         SearchTextField = new javax.swing.JTextField();
         SearchButton = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         ListTable = new javax.swing.JTable();
-        jLabel2 = new javax.swing.JLabel();
-        SecondLabel = new javax.swing.JLabel();
+        NoteLabel = new javax.swing.JLabel();
+        SelectIDLabel = new javax.swing.JLabel();
         DeleteTextField = new javax.swing.JTextField();
         DeleteButton = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
+        DeleteNoteLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("目前的住房信息");
+        setTitle("Current housing information");
         setLocation(new java.awt.Point(480, 280));
 
-        jLabel1.setFont(new java.awt.Font("微软雅黑", 0, 14)); // NOI18N
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/身份证正面.png"))); // NOI18N
-        jLabel1.setText("请输入身份证姓名：");
+        IDNameLabel.setFont(new java.awt.Font("微软雅黑", 0, 14)); // NOI18N
+        IDNameLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/身份证正面.png"))); // NOI18N
+        IDNameLabel.setText("Please Enter Your ID Name:");
 
         SearchTextField.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
         SearchTextField.setForeground(new java.awt.Color(153, 153, 153));
@@ -116,14 +109,14 @@ public class RentInfoList extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(ListTable);
 
-        jLabel2.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/提示.png"))); // NOI18N
-        jLabel2.setText("(不输入则默认返回全部数据)");
+        NoteLabel.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
+        NoteLabel.setForeground(new java.awt.Color(102, 102, 102));
+        NoteLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/提示.png"))); // NOI18N
+        NoteLabel.setText("(If no input, all data will be returned by default)");
 
-        SecondLabel.setFont(new java.awt.Font("微软雅黑", 0, 14)); // NOI18N
-        SecondLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/身份证正面.png"))); // NOI18N
-        SecondLabel.setText("选中的身份证ID：");
+        SelectIDLabel.setFont(new java.awt.Font("微软雅黑", 0, 14)); // NOI18N
+        SelectIDLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/身份证正面.png"))); // NOI18N
+        SelectIDLabel.setText("Selected ID:");
 
         DeleteTextField.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
         DeleteTextField.setForeground(new java.awt.Color(153, 153, 153));
@@ -143,10 +136,10 @@ public class RentInfoList extends javax.swing.JFrame {
             }
         });
 
-        jLabel4.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/提示.png"))); // NOI18N
-        jLabel4.setText("（删除表中选中的数据）");
+        DeleteNoteLabel.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
+        DeleteNoteLabel.setForeground(new java.awt.Color(102, 102, 102));
+        DeleteNoteLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/提示.png"))); // NOI18N
+        DeleteNoteLabel.setText("(Delete the selected data in the table)");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -156,24 +149,24 @@ public class RentInfoList extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
+                        .addComponent(IDNameLabel)
                         .addGap(18, 18, 18)
                         .addComponent(SearchTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(SearchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(26, 26, 26)
-                        .addComponent(jLabel2)
+                        .addComponent(NoteLabel)
                         .addGap(18, 18, 18))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(SecondLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(SelectIDLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(DeleteTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 281, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(40, 40, 40)
                                 .addComponent(DeleteButton, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(26, 26, 26)
-                                .addComponent(jLabel4))
+                                .addComponent(DeleteNoteLabel))
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 818, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
@@ -182,18 +175,18 @@ public class RentInfoList extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(IDNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(SearchButton)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
+                    .addComponent(NoteLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
                     .addComponent(SearchTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(32, 32, 32)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(SecondLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(SelectIDLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(DeleteTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(DeleteButton)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(DeleteNoteLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(19, 19, 19))
         );
 
@@ -201,11 +194,11 @@ public class RentInfoList extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void SearchTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SearchTextFieldActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_SearchTextFieldActionPerformed
 
     private void SearchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SearchButtonActionPerformed
-        // TODO add your handling code here:
+        //SearchButton:The data for each column is read from the database and exported to the List;
         DefaultTableModel table = (DefaultTableModel) ListTable.getModel();
         table.setRowCount(0);
         RentController rentDB = new RentController();
@@ -228,27 +221,27 @@ public class RentInfoList extends javax.swing.JFrame {
     }//GEN-LAST:event_SearchButtonActionPerformed
 
     private void DeleteTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteTextFieldActionPerformed
-        // TODO add your handling code here:
+       
     }//GEN-LAST:event_DeleteTextFieldActionPerformed
 
     private void DeleteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteButtonActionPerformed
-        // TODO add your handling code here:
+
         //删除选中的数据库信息,并且把信息导入到rent表里面
-        if (JOptionPane.showConfirmDialog(this, "您确定删除么？") != JOptionPane.OK_OPTION) {
+        if (JOptionPane.showConfirmDialog(this, "Are you sure to delete it?") != JOptionPane.OK_OPTION) {
             return;
         }
         int index = ListTable.getSelectedRow();
         if (index == -1) {
-            JOptionPane.showMessageDialog(this, "请从表中选中要删除的一条数据!");
+            JOptionPane.showMessageDialog(this, "Please select the data to be deleted from the table!");
             return;
         }
         DefaultTableModel dft = (DefaultTableModel) ListTable.getModel();
         String SelectedId = dft.getValueAt(ListTable.getSelectedRow(), 0).toString();
         RentController rentDB = new RentController();
         if (rentDB.delete(SelectedId)) {
-            JOptionPane.showMessageDialog(this, "删除成功!");
+            JOptionPane.showMessageDialog(this, "Delete successful!");
         } else {
-            JOptionPane.showMessageDialog(this, "删除失败!");
+            JOptionPane.showMessageDialog(this, "Deletion failed!");
         }
         rentDB.closeBaseDB();
 //        setTable(new RentInfo());
@@ -256,7 +249,7 @@ public class RentInfoList extends javax.swing.JFrame {
     }//GEN-LAST:event_DeleteButtonActionPerformed
 
     private void ListTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ListTableMouseClicked
-        // TODO add your handling code here:
+
         //对表格的select操作  ListTable
         DefaultTableModel dft = (DefaultTableModel) ListTable.getModel();
         DeleteTextField.setText(dft.getValueAt(ListTable.getSelectedRow(), 0).toString());
@@ -300,14 +293,14 @@ public class RentInfoList extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton DeleteButton;
+    private javax.swing.JLabel DeleteNoteLabel;
     private javax.swing.JTextField DeleteTextField;
+    private javax.swing.JLabel IDNameLabel;
     private javax.swing.JTable ListTable;
+    private javax.swing.JLabel NoteLabel;
     private javax.swing.JButton SearchButton;
     private javax.swing.JTextField SearchTextField;
-    private javax.swing.JLabel SecondLabel;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel SelectIDLabel;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }

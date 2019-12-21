@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package view;
 
 import controller.RequestController;
@@ -12,10 +8,7 @@ import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import model.RequestInfo;
 
-/**
- *
- * @author GP62MVR
- */
+
 public class RequestInfoList extends javax.swing.JFrame {
 
     /**
@@ -34,25 +27,25 @@ public class RequestInfoList extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        IDNameLabel = new javax.swing.JLabel();
         SearchTextField = new javax.swing.JTextField();
         SearchButton = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
+        DataNoteLabel = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        ListTable = new javax.swing.JTable();
-        SecondLabel = new javax.swing.JLabel();
+        RequestInfoListTable = new javax.swing.JTable();
+        IDLabel = new javax.swing.JLabel();
         DeleteTextField = new javax.swing.JTextField();
         DeleteButton = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
+        DeleteNoteLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("请求处理界面");
+        setTitle("Request processing interface");
         setLocation(new java.awt.Point(480, 280));
         setName("服务申请表"); // NOI18N
 
-        jLabel1.setFont(new java.awt.Font("微软雅黑", 0, 14)); // NOI18N
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/身份证正面.png"))); // NOI18N
-        jLabel1.setText("请输入身份证姓名：");
+        IDNameLabel.setFont(new java.awt.Font("微软雅黑", 0, 14)); // NOI18N
+        IDNameLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/身份证正面.png"))); // NOI18N
+        IDNameLabel.setText("Please Enter Your Name :");
 
         SearchTextField.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
         SearchTextField.setForeground(new java.awt.Color(153, 153, 153));
@@ -72,12 +65,12 @@ public class RequestInfoList extends javax.swing.JFrame {
             }
         });
 
-        jLabel2.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/提示.png"))); // NOI18N
-        jLabel2.setText("(不输入则默认返回全部数据)");
+        DataNoteLabel.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
+        DataNoteLabel.setForeground(new java.awt.Color(102, 102, 102));
+        DataNoteLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/提示.png"))); // NOI18N
+        DataNoteLabel.setText("If no input, all data will be returned by default)");
 
-        ListTable.setModel(new javax.swing.table.DefaultTableModel(
+        RequestInfoListTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
                 {null, null, null},
@@ -112,12 +105,12 @@ public class RequestInfoList extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        ListTable.setRowHeight(30);
-        jScrollPane1.setViewportView(ListTable);
+        RequestInfoListTable.setRowHeight(30);
+        jScrollPane1.setViewportView(RequestInfoListTable);
 
-        SecondLabel.setFont(new java.awt.Font("微软雅黑", 0, 14)); // NOI18N
-        SecondLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/身份证正面.png"))); // NOI18N
-        SecondLabel.setText("选中的身份证ID：");
+        IDLabel.setFont(new java.awt.Font("微软雅黑", 0, 14)); // NOI18N
+        IDLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/身份证正面.png"))); // NOI18N
+        IDLabel.setText("Selected ID :");
 
         DeleteTextField.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
         DeleteTextField.setForeground(new java.awt.Color(153, 153, 153));
@@ -137,10 +130,10 @@ public class RequestInfoList extends javax.swing.JFrame {
             }
         });
 
-        jLabel4.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/提示.png"))); // NOI18N
-        jLabel4.setText("（删除表中选中的数据）");
+        DeleteNoteLabel.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
+        DeleteNoteLabel.setForeground(new java.awt.Color(102, 102, 102));
+        DeleteNoteLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/提示.png"))); // NOI18N
+        DeleteNoteLabel.setText("(Delete the selected data in the table)");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -150,25 +143,25 @@ public class RequestInfoList extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel1)
+                        .addComponent(IDNameLabel)
                         .addGap(18, 18, 18)
                         .addComponent(SearchTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(14, 14, 14)
                         .addComponent(SearchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel2))
+                        .addComponent(DataNoteLabel))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 812, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(24, 24, 24)
-                        .addComponent(SecondLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(IDLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(DeleteTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 281, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(DeleteButton, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(26, 26, 26)
-                        .addComponent(jLabel4)))
+                        .addComponent(DeleteNoteLabel)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -176,19 +169,19 @@ public class RequestInfoList extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(16, 16, 16)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(IDNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(SearchTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(SearchButton)
-                    .addComponent(jLabel2))
+                    .addComponent(DataNoteLabel))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 307, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(41, 41, 41)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(DeleteButton)
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(DeleteNoteLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(SecondLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(IDLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(DeleteTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(41, 41, 41))
         );
@@ -201,8 +194,8 @@ public class RequestInfoList extends javax.swing.JFrame {
     }//GEN-LAST:event_SearchTextFieldActionPerformed
 
     private void SearchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SearchButtonActionPerformed
-        // TODO add your handling code here:
-        DefaultTableModel table = (DefaultTableModel) ListTable.getModel();
+        //SearchButton :The data for each column is read from the database and exported to the List;
+        DefaultTableModel table = (DefaultTableModel) RequestInfoListTable.getModel();
         table.setRowCount(0);
         RequestController requestDB = new RequestController();
         RequestInfo requestInfo = new RequestInfo();
@@ -223,26 +216,26 @@ public class RequestInfoList extends javax.swing.JFrame {
     }//GEN-LAST:event_DeleteTextFieldActionPerformed
 
     private void DeleteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteButtonActionPerformed
-        // TODO add your handling code here:
-        //删除选中的数据库信息,并且把信息导入到rent表里面
-        if (JOptionPane.showConfirmDialog(this, "您确定删除么？") != JOptionPane.OK_OPTION) {
+        
+        //Delete the selected database information and import it into the rent table;
+        if (JOptionPane.showConfirmDialog(this, "Are you sure you want to delete it?") != JOptionPane.OK_OPTION) {
             return;
         }
-        int index = ListTable.getSelectedRow();
+        int index = RequestInfoListTable.getSelectedRow();
         if (index == -1) {
-            JOptionPane.showMessageDialog(this, "请从表中选中要删除的一条数据!");
+            JOptionPane.showMessageDialog(this, "Please select the data to be deleted from the table!");
             return;
         }
-        DefaultTableModel dft = (DefaultTableModel) ListTable.getModel();
-        String SelectedId = dft.getValueAt(ListTable.getSelectedRow(), 0).toString();
+        DefaultTableModel dft = (DefaultTableModel) RequestInfoListTable.getModel();
+        String SelectedId = dft.getValueAt(RequestInfoListTable.getSelectedRow(), 0).toString();
         RequestController requestDB = new RequestController();
         if (requestDB.delete(SelectedId)) {
-            JOptionPane.showMessageDialog(this, "删除成功!");
+            JOptionPane.showMessageDialog(this, "Delete successful!");
         } else {
-            JOptionPane.showMessageDialog(this, "删除失败!");
+            JOptionPane.showMessageDialog(this, "Deletion failed!");
         }
         requestDB.closeBaseDB();
-        //        setTable(new RentInfo());
+        //  setTable(new RentInfo());
         dft.setRowCount(0);
     }//GEN-LAST:event_DeleteButtonActionPerformed
 
@@ -282,15 +275,15 @@ public class RequestInfoList extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel DataNoteLabel;
     private javax.swing.JButton DeleteButton;
+    private javax.swing.JLabel DeleteNoteLabel;
     private javax.swing.JTextField DeleteTextField;
-    private javax.swing.JTable ListTable;
+    private javax.swing.JLabel IDLabel;
+    private javax.swing.JLabel IDNameLabel;
+    private javax.swing.JTable RequestInfoListTable;
     private javax.swing.JButton SearchButton;
     private javax.swing.JTextField SearchTextField;
-    private javax.swing.JLabel SecondLabel;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }

@@ -243,7 +243,7 @@ public class FrameLogin extends javax.swing.JFrame {
     }//GEN-LAST:event_LoginButtonActionPerformed
 
     private void RsetButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RsetButtonActionPerformed
-        // ResetButton:to clear up the JTextField's information and rewrite it.
+        // ResetButton:to clear up the TextField's information and rewrite it.
         userNameTextField.setText("");
         passwordTextField.setText("");
         userTypeComboBox.setSelectedIndex(0);

@@ -1,16 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package view;
 
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author hasee
- */
+
 public class FrameManager extends javax.swing.JFrame {
 
     /**
@@ -35,23 +28,23 @@ public class FrameManager extends javax.swing.JFrame {
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem7 = new javax.swing.JMenuItem();
         jMenu5 = new javax.swing.JMenu();
-        jLabel2 = new javax.swing.JLabel();
+        ManagerHomePictureLabel = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenuItem3 = new javax.swing.JMenuItem();
-        jMenuItem5 = new javax.swing.JMenuItem();
-        jMenuItem9 = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
-        jMenuItem6 = new javax.swing.JMenuItem();
-        jMenuItem11 = new javax.swing.JMenuItem();
-        jMenu7 = new javax.swing.JMenu();
-        jMenuItem8 = new javax.swing.JMenuItem();
-        jMenuItem12 = new javax.swing.JMenuItem();
-        jMenuItem10 = new javax.swing.JMenuItem();
-        jMenu4 = new javax.swing.JMenu();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        jMenuItem4 = new javax.swing.JMenuItem();
-        jMenu6 = new javax.swing.JMenu();
+        CheckInMenu = new javax.swing.JMenu();
+        CheckInMenuItem = new javax.swing.JMenuItem();
+        CheckInSearchMenuItem = new javax.swing.JMenuItem();
+        ReservationMenuItem = new javax.swing.JMenuItem();
+        RoomInfoMenu = new javax.swing.JMenu();
+        RoomInfoMenuItem = new javax.swing.JMenuItem();
+        RoomInfoAddMenuItem = new javax.swing.JMenuItem();
+        CustomerMenu = new javax.swing.JMenu();
+        CustomerInfoMenuItem = new javax.swing.JMenuItem();
+        RoomServerMenuItem = new javax.swing.JMenuItem();
+        InvoicingMenuItem = new javax.swing.JMenuItem();
+        SystemMenu = new javax.swing.JMenu();
+        ExitMenuItem = new javax.swing.JMenuItem();
+        HelpMenuItem = new javax.swing.JMenuItem();
+        WelcomeMenu = new javax.swing.JMenu();
 
         jMenu3.setText("jMenu3");
 
@@ -66,131 +59,132 @@ public class FrameManager extends javax.swing.JFrame {
         setFont(new java.awt.Font("微软雅黑", 0, 10)); // NOI18N
         setLocation(new java.awt.Point(400, 200));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/househotel.jpg"))); // NOI18N
+        ManagerHomePictureLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/househotel.jpg"))); // NOI18N
 
         jMenuBar1.setPreferredSize(new java.awt.Dimension(543, 30));
 
-        jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/042-folder.png"))); // NOI18N
-        jMenu1.setText("入住信息管理");
+        CheckInMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/042-folder.png"))); // NOI18N
+        CheckInMenu.setText("Check-in");
 
-        jMenuItem3.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
-        jMenuItem3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/增加.png"))); // NOI18N
-        jMenuItem3.setText("入住登记");
-        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+        CheckInMenuItem.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
+        CheckInMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/增加.png"))); // NOI18N
+        CheckInMenuItem.setText("Check-In");
+        CheckInMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem3ActionPerformed(evt);
+                CheckInMenuItemActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem3);
+        CheckInMenu.add(CheckInMenuItem);
 
-        jMenuItem5.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
-        jMenuItem5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/成功.png"))); // NOI18N
-        jMenuItem5.setText("入住查询");
-        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
+        CheckInSearchMenuItem.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
+        CheckInSearchMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/成功.png"))); // NOI18N
+        CheckInSearchMenuItem.setText("Query");
+        CheckInSearchMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem5ActionPerformed(evt);
+                CheckInSearchMenuItemActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem5);
+        CheckInMenu.add(CheckInSearchMenuItem);
 
-        jMenuItem9.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
-        jMenuItem9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/叹号.png"))); // NOI18N
-        jMenuItem9.setText("预订处理");
-        jMenuItem9.addActionListener(new java.awt.event.ActionListener() {
+        ReservationMenuItem.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
+        ReservationMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/叹号.png"))); // NOI18N
+        ReservationMenuItem.setText("Rreservation");
+        ReservationMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem9ActionPerformed(evt);
+                ReservationMenuItemActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem9);
+        CheckInMenu.add(ReservationMenuItem);
 
-        jMenuBar1.add(jMenu1);
+        jMenuBar1.add(CheckInMenu);
 
-        jMenu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/050-home.png"))); // NOI18N
-        jMenu2.setText("房间信息管理");
+        RoomInfoMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/050-home.png"))); // NOI18N
+        RoomInfoMenu.setText("Room");
 
-        jMenuItem6.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
-        jMenuItem6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/首页.png"))); // NOI18N
-        jMenuItem6.setText("房间信息查询");
-        jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
+        RoomInfoMenuItem.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
+        RoomInfoMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/首页.png"))); // NOI18N
+        RoomInfoMenuItem.setText("Room Information Query");
+        RoomInfoMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem6ActionPerformed(evt);
+                RoomInfoMenuItemActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem6);
+        RoomInfoMenu.add(RoomInfoMenuItem);
 
-        jMenuItem11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/首页.png"))); // NOI18N
-        jMenuItem11.setText("房间信息添加");
-        jMenuItem11.addActionListener(new java.awt.event.ActionListener() {
+        RoomInfoAddMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/首页.png"))); // NOI18N
+        RoomInfoAddMenuItem.setText("Room Information Addition");
+        RoomInfoAddMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem11ActionPerformed(evt);
+                RoomInfoAddMenuItemActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem11);
+        RoomInfoMenu.add(RoomInfoAddMenuItem);
 
-        jMenuBar1.add(jMenu2);
+        jMenuBar1.add(RoomInfoMenu);
 
-        jMenu7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/023-users.png"))); // NOI18N
-        jMenu7.setText("顾客信息管理");
+        CustomerMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/023-users.png"))); // NOI18N
+        CustomerMenu.setText("Customer ");
 
-        jMenuItem8.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
-        jMenuItem8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/022-users-1.png"))); // NOI18N
-        jMenuItem8.setText("顾客信息查询");
-        jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
+        CustomerInfoMenuItem.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
+        CustomerInfoMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/022-users-1.png"))); // NOI18N
+        CustomerInfoMenuItem.setText("Customer Information Query");
+        CustomerInfoMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem8ActionPerformed(evt);
+                CustomerInfoMenuItemActionPerformed(evt);
             }
         });
-        jMenu7.add(jMenuItem8);
+        CustomerMenu.add(CustomerInfoMenuItem);
 
-        jMenuItem12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/公告.png"))); // NOI18N
-        jMenuItem12.setText("客房服务管理");
-        jMenuItem12.addActionListener(new java.awt.event.ActionListener() {
+        RoomServerMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/公告.png"))); // NOI18N
+        RoomServerMenuItem.setText("Room Service Management");
+        RoomServerMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem12ActionPerformed(evt);
+                RoomServerMenuItemActionPerformed(evt);
             }
         });
-        jMenu7.add(jMenuItem12);
+        CustomerMenu.add(RoomServerMenuItem);
 
-        jMenuItem10.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
-        jMenuItem10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/优惠券.png"))); // NOI18N
-        jMenuItem10.setText("顾客结账处理");
-        jMenuItem10.addActionListener(new java.awt.event.ActionListener() {
+        InvoicingMenuItem.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
+        InvoicingMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/优惠券.png"))); // NOI18N
+        InvoicingMenuItem.setText("Customer Checkout");
+        InvoicingMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem10ActionPerformed(evt);
+                InvoicingMenuItemActionPerformed(evt);
             }
         });
-        jMenu7.add(jMenuItem10);
+        CustomerMenu.add(InvoicingMenuItem);
 
-        jMenuBar1.add(jMenu7);
+        jMenuBar1.add(CustomerMenu);
 
-        jMenu4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/006-settings.png"))); // NOI18N
-        jMenu4.setText("系统设置");
+        SystemMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/006-settings.png"))); // NOI18N
+        SystemMenu.setText("System Settings");
 
-        jMenuItem2.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
-        jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/失败.png"))); // NOI18N
-        jMenuItem2.setText("退出系统");
-        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+        ExitMenuItem.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
+        ExitMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/失败.png"))); // NOI18N
+        ExitMenuItem.setText("Log Out");
+        ExitMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem2ActionPerformed(evt);
+                ExitMenuItemActionPerformed(evt);
             }
         });
-        jMenu4.add(jMenuItem2);
+        SystemMenu.add(ExitMenuItem);
 
-        jMenuItem4.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
-        jMenuItem4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/帮助.png"))); // NOI18N
-        jMenuItem4.setText("帮助手册");
-        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+        HelpMenuItem.setFont(new java.awt.Font("微软雅黑", 0, 12)); // NOI18N
+        HelpMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/帮助.png"))); // NOI18N
+        HelpMenuItem.setText("Help Manual");
+        HelpMenuItem.setToolTipText("");
+        HelpMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem4ActionPerformed(evt);
+                HelpMenuItemActionPerformed(evt);
             }
         });
-        jMenu4.add(jMenuItem4);
+        SystemMenu.add(HelpMenuItem);
 
-        jMenuBar1.add(jMenu4);
+        jMenuBar1.add(SystemMenu);
 
-        jMenu6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/会员.png"))); // NOI18N
-        jMenu6.setText("欢迎登陆本系统！");
-        jMenuBar1.add(jMenu6);
+        WelcomeMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/会员.png"))); // NOI18N
+        WelcomeMenu.setText("Welcome To The System!");
+        jMenuBar1.add(WelcomeMenu);
 
         setJMenuBar(jMenuBar1);
 
@@ -200,80 +194,81 @@ public class FrameManager extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel2)
+                .addComponent(ManagerHomePictureLabel)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel2)
+                .addComponent(ManagerHomePictureLabel)
                 .addGap(0, 11, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
-        // TODO add your handling code here:
+ 
+    private void CheckInMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CheckInMenuItemActionPerformed
+        // Go to addRentFrame function interface;
         RentInfoAdd addRentFrame=new RentInfoAdd();
         addRentFrame.setVisible(true);
-    }//GEN-LAST:event_jMenuItem3ActionPerformed
+    }//GEN-LAST:event_CheckInMenuItemActionPerformed
 
-    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
-        // TODO add your handling code here:
-        String message="这里面写的是使用手册！";
+    private void HelpMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HelpMenuItemActionPerformed
+        //Open the manual;
+        String message="This is the manual!";
         JOptionPane.showMessageDialog(this,message);
-    }//GEN-LAST:event_jMenuItem4ActionPerformed
+    }//GEN-LAST:event_HelpMenuItemActionPerformed
 
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-        // TODO add your handling code here:
-        String message2="确定退出本系统吗？";
+    private void ExitMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitMenuItemActionPerformed
+        //Verify whether to exit the system, and if so, exit;
+        String message2="Are you sure you want to quit the system?";
         if(JOptionPane.showConfirmDialog(this,message2)==JOptionPane.OK_OPTION){
             System.exit(0);
         }
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
+    }//GEN-LAST:event_ExitMenuItemActionPerformed
 
-    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
+    private void CheckInSearchMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CheckInSearchMenuItemActionPerformed
+        // Open RentInfoList and display the form
         RentInfoList rif=new RentInfoList();
         rif.setVisible(true);
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem5ActionPerformed
+        
+    }//GEN-LAST:event_CheckInSearchMenuItemActionPerformed
 
-    private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
-        // TODO add your handling code here:
+    private void ReservationMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReservationMenuItemActionPerformed
+        // Open ReserveInfoList and display the form;
         ReserveInfoList rmf=new ReserveInfoList();
         rmf.setVisible(true);
-    }//GEN-LAST:event_jMenuItem9ActionPerformed
+    }//GEN-LAST:event_ReservationMenuItemActionPerformed
 
-    private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
-        // TODO add your handling code here: 查询顾客信息
+    private void CustomerInfoMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustomerInfoMenuItemActionPerformed
+        // Open RentInfoList and display the form;
         RentInfoList rentInfoLsit=new RentInfoList();
         rentInfoLsit.setVisible(true);
-    }//GEN-LAST:event_jMenuItem8ActionPerformed
+    }//GEN-LAST:event_CustomerInfoMenuItemActionPerformed
 
-    private void jMenuItem10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem10ActionPerformed
-        // TODO add your handling code here:
+    private void InvoicingMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InvoicingMenuItemActionPerformed
+        // Open PayingInfoList and display the form;
         PayingInfoList pmf=new PayingInfoList();
         pmf.setVisible(true);
         
-    }//GEN-LAST:event_jMenuItem10ActionPerformed
+    }//GEN-LAST:event_InvoicingMenuItemActionPerformed
 
-    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
-        // TODO add your handling code here:
+    private void RoomInfoMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RoomInfoMenuItemActionPerformed
+        // Open RoomInfoList and display the form:
         RoomInfoList rif =new RoomInfoList();
         rif.setVisible(true);
-    }//GEN-LAST:event_jMenuItem6ActionPerformed
+    }//GEN-LAST:event_RoomInfoMenuItemActionPerformed
 
-    private void jMenuItem11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem11ActionPerformed
-        // TODO add your handling code here:
+    private void RoomInfoAddMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RoomInfoAddMenuItemActionPerformed
+        // Open RoomInfoAdd and display the form;
         RoomInfoAdd arf=new RoomInfoAdd();
         arf.setVisible(true);
-    }//GEN-LAST:event_jMenuItem11ActionPerformed
+    }//GEN-LAST:event_RoomInfoAddMenuItemActionPerformed
 
-    private void jMenuItem12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem12ActionPerformed
-        // TODO add your handling code here:
+    private void RoomServerMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RoomServerMenuItemActionPerformed
+        // display the form of RequestInfoList:
         new RequestInfoList().setVisible(true);
-    }//GEN-LAST:event_jMenuItem12ActionPerformed
+    }//GEN-LAST:event_RoomServerMenuItemActionPerformed
 
     /**
      * @param args the command line arguments
@@ -314,26 +309,26 @@ public class FrameManager extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu CheckInMenu;
+    private javax.swing.JMenuItem CheckInMenuItem;
+    private javax.swing.JMenuItem CheckInSearchMenuItem;
+    private javax.swing.JMenuItem CustomerInfoMenuItem;
+    private javax.swing.JMenu CustomerMenu;
+    private javax.swing.JMenuItem ExitMenuItem;
+    private javax.swing.JMenuItem HelpMenuItem;
+    private javax.swing.JMenuItem InvoicingMenuItem;
+    private javax.swing.JLabel ManagerHomePictureLabel;
+    private javax.swing.JMenuItem ReservationMenuItem;
+    private javax.swing.JMenuItem RoomInfoAddMenuItem;
+    private javax.swing.JMenu RoomInfoMenu;
+    private javax.swing.JMenuItem RoomInfoMenuItem;
+    private javax.swing.JMenuItem RoomServerMenuItem;
+    private javax.swing.JMenu SystemMenu;
+    private javax.swing.JMenu WelcomeMenu;
     private javax.swing.JMenu jMenu3;
-    private javax.swing.JMenu jMenu4;
     private javax.swing.JMenu jMenu5;
-    private javax.swing.JMenu jMenu6;
-    private javax.swing.JMenu jMenu7;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem10;
-    private javax.swing.JMenuItem jMenuItem11;
-    private javax.swing.JMenuItem jMenuItem12;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JMenuItem jMenuItem5;
-    private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JMenuItem jMenuItem7;
-    private javax.swing.JMenuItem jMenuItem8;
-    private javax.swing.JMenuItem jMenuItem9;
     // End of variables declaration//GEN-END:variables
 }
